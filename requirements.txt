@@ -8,7 +8,7 @@ scikit-learn
 matplotlib
 Levenshtein
 spacy==3.4.4
-dateutil
+python-dateutil==2.9.0
 functools
 tqdm
 IPython
