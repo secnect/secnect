@@ -90,6 +90,10 @@ def main():
         step=0.05,
         help="Log lines with similarity scores above this threshold will be highlighted"
     )
+    model_selection = st.selectbox(
+    "Model selection",
+    ("Default similarity", "BERT model", "LLM model"),)
+    st.write(f" You selected: {model_selection}")
     
     top_n = st.sidebar.number_input(
         "Number of top results to display",
