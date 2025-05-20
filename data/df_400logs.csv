@@ -1,0 +1,401 @@
+text,label
+Jun 14 15:16:01 combo sshd(pam_unix) 19939.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 14 15:16:02 combo sshd(pam_unix) 19937.0 check pass; user unknown,Other
+Jun 14 15:16:02 combo sshd(pam_unix) 19937.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20882.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20884.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20883.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20885.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20886.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20892.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20893.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20896.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20897.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 02:04:59 combo sshd(pam_unix) 20898.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=220-135-151-1.hinet-ip.hinet.net  user=root,Failed_login
+Jun 15 04:06:18 combo su(pam_unix) 21416.0 session opened for user cyrus by (uid=0),Success_login
+Jun 15 04:06:19 combo su(pam_unix) 21416.0 session closed for user cyrus,Other
+Jun 15 04:06:20 combo logrotate nan ALERT exited abnormally with [1],Other
+Jun 15 04:12:42 combo su(pam_unix) 22644.0 session opened for user news by (uid=0),Success_login
+Jun 15 04:12:43 combo su(pam_unix) 22644.0 session closed for user news,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23397.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23397.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23395.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23395.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23404.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23404.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23399.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23399.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23406.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23406.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23396.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23394.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23407.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23394.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23403.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23396.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23407.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23403.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:12:34 combo sshd(pam_unix) 23412.0 check pass; user unknown,Other
+Jun 15 12:12:34 combo sshd(pam_unix) 23412.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:13:19 combo sshd(pam_unix) 23414.0 check pass; user unknown,Other
+Jun 15 12:13:19 combo sshd(pam_unix) 23414.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 12:13:20 combo sshd(pam_unix) 23416.0 check pass; user unknown,Other
+Jun 15 12:13:20 combo sshd(pam_unix) 23416.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=218.188.2.4,Failed_login
+Jun 15 14:53:32 combo sshd(pam_unix) 23661.0 check pass; user unknown,Other
+Jun 15 14:53:32 combo sshd(pam_unix) 23661.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:32 combo sshd(pam_unix) 23663.0 check pass; user unknown,Other
+Jun 15 14:53:32 combo sshd(pam_unix) 23663.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:32 combo sshd(pam_unix) 23664.0 check pass; user unknown,Other
+Jun 15 14:53:32 combo sshd(pam_unix) 23664.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:33 combo sshd(pam_unix) 23665.0 check pass; user unknown,Other
+Jun 15 14:53:33 combo sshd(pam_unix) 23665.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:34 combo sshd(pam_unix) 23669.0 check pass; user unknown,Other
+Jun 15 14:53:34 combo sshd(pam_unix) 23669.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:35 combo sshd(pam_unix) 23671.0 check pass; user unknown,Other
+Jun 15 14:53:35 combo sshd(pam_unix) 23671.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:35 combo sshd(pam_unix) 23673.0 check pass; user unknown,Other
+Jun 15 14:53:35 combo sshd(pam_unix) 23673.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:35 combo sshd(pam_unix) 23674.0 check pass; user unknown,Other
+Jun 15 14:53:35 combo sshd(pam_unix) 23674.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:36 combo sshd(pam_unix) 23678.0 check pass; user unknown,Other
+Jun 15 14:53:36 combo sshd(pam_unix) 23678.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 14:53:36 combo sshd(pam_unix) 23677.0 check pass; user unknown,Other
+Jun 15 14:53:36 combo sshd(pam_unix) 23677.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=061092085098.ctinets.com,Failed_login
+Jun 15 20:05:31 combo sshd(pam_unix) 24138.0 check pass; user unknown,Other
+Jun 15 20:05:31 combo sshd(pam_unix) 24138.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=d211-116-254-214.rev.krline.net,Failed_login
+Jun 15 20:05:31 combo sshd(pam_unix) 24137.0 check pass; user unknown,Other
+Jun 15 20:05:31 combo sshd(pam_unix) 24137.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=d211-116-254-214.rev.krline.net,Failed_login
+Jun 15 20:05:31 combo sshd(pam_unix) 24141.0 check pass; user unknown,Other
+Jun 15 20:05:31 combo sshd(pam_unix) 24141.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=d211-116-254-214.rev.krline.net,Failed_login
+Jun 15 20:05:31 combo sshd(pam_unix) 24140.0 check pass; user unknown,Other
+Jun 15 20:05:31 combo sshd(pam_unix) 24140.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=d211-116-254-214.rev.krline.net,Failed_login
+Jun 15 20:05:31 combo sshd(pam_unix) 24139.0 check pass; user unknown,Other
+Jun 15 20:05:31 combo sshd(pam_unix) 24139.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=d211-116-254-214.rev.krline.net,Failed_login
+Jun 16 04:10:22 combo su(pam_unix) 25178.0 session opened for user cyrus by (uid=0),Success_login
+Jun 16 04:10:23 combo su(pam_unix) 25178.0 session closed for user cyrus,Other
+Jun 16 04:10:24 combo logrotate nan ALERT exited abnormally with [1],Other
+Jun 16 04:16:17 combo su(pam_unix) 25548.0 session opened for user news by (uid=0),Success_login
+Jun 16 04:16:18 combo su(pam_unix) 25548.0 session closed for user news,Other
+Jun 17 04:03:33 combo su(pam_unix) 27953.0 session opened for user cyrus by (uid=0),Success_login
+Jun 17 04:03:34 combo su(pam_unix) 27953.0 session closed for user cyrus,Other
+Jun 17 04:03:36 combo logrotate nan ALERT exited abnormally with [1],Other
+Jun 17 04:09:43 combo su(pam_unix) 29190.0 session opened for user news by (uid=0),Success_login
+Jun 17 04:09:45 combo su(pam_unix) 29190.0 session closed for user news,Other
+Jun 17 07:07:00 combo ftpd 29504.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:00 2005,Other
+Jun 17 07:07:00 combo ftpd 29508.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:00 2005,Other
+Jun 17 07:07:00 combo ftpd 29507.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:00 2005,Other
+Jun 17 07:07:00 combo ftpd 29505.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:00 2005,Other
+Jun 17 07:07:00 combo ftpd 29506.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:00 2005,Other
+Jun 17 07:07:00 combo ftpd 29509.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:00 2005,Other
+Jun 17 07:07:02 combo ftpd 29510.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:02 2005,Other
+Jun 17 07:07:04 combo ftpd 29511.0 connection from 24.54.76.216 (24-54-76-216.bflony.adelphia.net) at Fri Jun 17 07:07:04 2005,Other
+Jun 17 19:43:13 combo sshd(pam_unix) 30565.0 authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.46.224.253  user=guest,Failed_login
+Jun 17 20:29:26 combo sshd(pam_unix) 30631.0 session opened for user test by (uid=509),Success_login
+Jun 17 20:34:57 combo sshd(pam_unix) 30631.0 session closed for user test,Other
+Jun 17 20:55:06 combo ftpd 30755.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:06 2005,Other
+Jun 17 20:55:06 combo ftpd 30754.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:06 2005,Other
+Jun 17 20:55:06 combo ftpd 30753.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:06 2005,Other
+Jun 17 20:55:06 combo ftpd 30756.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:06 2005,Other
+Jun 17 20:55:06 combo ftpd 30757.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:06 2005,Other
+Jun 17 20:55:07 combo ftpd 30758.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:07 2005,Other
+Jun 17 20:55:07 combo ftpd 30759.0 connection from 82.252.162.81 (lns-vlq-45-tou-82-252-162-81.adsl.proxad.net) at Fri Jun 17 20:55:07 2005,Other
+Dec 10 06:55:46 LabSZ 24200 reverse mapping checking getaddrinfo for ns.marryaldkfaczcz.com [173.234.31.186] failed - POSSIBLE BREAK-IN ATTEMPT!,Other
+Dec 10 06:55:46 LabSZ 24200 Invalid user webmaster from 173.234.31.186,Other
+Dec 10 06:55:46 LabSZ 24200 input_userauth_request: invalid user webmaster [preauth],Other
+Dec 10 06:55:46 LabSZ 24200 pam_unix(sshd:auth): check pass; user unknown,Other
+Dec 10 06:55:46 LabSZ 24200 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.234.31.186,Other
+Dec 10 06:55:48 LabSZ 24200 Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2,Failed_login
+Dec 10 06:55:48 LabSZ 24200 Connection closed by 173.234.31.186 [preauth],Other
+Dec 10 07:02:47 LabSZ 24203 Connection closed by 212.47.254.145 [preauth],Other
+Dec 10 07:07:38 LabSZ 24206 Invalid user test9 from 52.80.34.196,Other
+Dec 10 07:07:38 LabSZ 24206 input_userauth_request: invalid user test9 [preauth],Other
+Dec 10 07:07:38 LabSZ 24206 pam_unix(sshd:auth): check pass; user unknown,Other
+Dec 10 07:07:38 LabSZ 24206 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=ec2-52-80-34-196.cn-north-1.compute.amazonaws.com.cn,Other
+Dec 10 07:07:45 LabSZ 24206 Failed password for invalid user test9 from 52.80.34.196 port 36060 ssh2,Failed_login
+Dec 10 07:07:45 LabSZ 24206 Received disconnect from 52.80.34.196: 11: Bye Bye [preauth],Other
+Dec 10 07:08:28 LabSZ 24208 reverse mapping checking getaddrinfo for ns.marryaldkfaczcz.com [173.234.31.186] failed - POSSIBLE BREAK-IN ATTEMPT!,Other
+Dec 10 07:08:28 LabSZ 24208 Invalid user webmaster from 173.234.31.186,Other
+Dec 10 07:08:28 LabSZ 24208 input_userauth_request: invalid user webmaster [preauth],Other
+Dec 10 07:08:28 LabSZ 24208 pam_unix(sshd:auth): check pass; user unknown,Other
+Dec 10 07:08:28 LabSZ 24208 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.234.31.186,Other
+Dec 10 07:08:30 LabSZ 24208 Failed password for invalid user webmaster from 173.234.31.186 port 39257 ssh2,Failed_login
+Dec 10 07:08:30 LabSZ 24208 Connection closed by 173.234.31.186 [preauth],Other
+Dec 10 07:11:42 LabSZ 24224 Invalid user chen from 202.100.179.208,Other
+Dec 10 07:11:42 LabSZ 24224 input_userauth_request: invalid user chen [preauth],Other
+Dec 10 07:11:42 LabSZ 24224 pam_unix(sshd:auth): check pass; user unknown,Other
+Dec 10 07:11:42 LabSZ 24224 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=202.100.179.208,Other
+Dec 10 07:11:44 LabSZ 24224 Failed password for invalid user chen from 202.100.179.208 port 32484 ssh2,Failed_login
+Dec 10 07:11:44 LabSZ 24224 Received disconnect from 202.100.179.208: 11: Bye Bye [preauth],Other
+Dec 10 07:13:31 LabSZ 24227 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=5.36.59.76.dynamic-dsl-ip.omantel.net.om  user=root,Other
+Dec 10 07:13:43 LabSZ 24227 Failed password for root from 5.36.59.76 port 42393 ssh2,Failed_login
+Dec 10 07:13:56 LabSZ 24227 message repeated 5 times: [ Failed password for root from 5.36.59.76 port 42393 ssh2],Failed_login
+Dec 10 07:13:56 LabSZ 24227 Disconnecting: Too many authentication failures for root [preauth],Other
+Dec 10 07:13:56 LabSZ 24227 PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=5.36.59.76.dynamic-dsl-ip.omantel.net.om  user=root,Other
+Dec 10 07:13:56 LabSZ 24227 PAM service(sshd) ignoring max retries; 6 > 3,Other
+Dec 10 07:27:50 LabSZ 24235 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:27:52 LabSZ 24235 Failed password for root from 112.95.230.3 port 45378 ssh2,Failed_login
+Dec 10 07:27:52 LabSZ 24235 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:27:53 LabSZ 24237 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:27:55 LabSZ 24237 Failed password for root from 112.95.230.3 port 47068 ssh2,Failed_login
+Dec 10 07:27:55 LabSZ 24237 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:27:55 LabSZ 24239 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:27:58 LabSZ 24239 Failed password for root from 112.95.230.3 port 49188 ssh2,Failed_login
+Dec 10 07:27:58 LabSZ 24239 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:27:58 LabSZ 24241 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:00 LabSZ 24241 Failed password for root from 112.95.230.3 port 50999 ssh2,Failed_login
+Dec 10 07:28:00 LabSZ 24241 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:01 LabSZ 24243 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:03 LabSZ 24243 Failed password for root from 112.95.230.3 port 52660 ssh2,Failed_login
+Dec 10 07:28:03 LabSZ 24243 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:03 LabSZ 24245 Invalid user pgadmin from 112.95.230.3,Other
+Dec 10 07:28:03 LabSZ 24245 input_userauth_request: invalid user pgadmin [preauth],Other
+Dec 10 07:28:03 LabSZ 24245 pam_unix(sshd:auth): check pass; user unknown,Other
+Dec 10 07:28:03 LabSZ 24245 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3,Other
+Dec 10 07:28:05 LabSZ 24245 Failed password for invalid user pgadmin from 112.95.230.3 port 54087 ssh2,Failed_login
+Dec 10 07:28:05 LabSZ 24245 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:06 LabSZ 24247 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:08 LabSZ 24247 Failed password for root from 112.95.230.3 port 55618 ssh2,Failed_login
+Dec 10 07:28:08 LabSZ 24247 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:08 LabSZ 24249 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:10 LabSZ 24249 Failed password for root from 112.95.230.3 port 57138 ssh2,Failed_login
+Dec 10 07:28:10 LabSZ 24249 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:10 LabSZ 24251 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:12 LabSZ 24251 Failed password for root from 112.95.230.3 port 58304 ssh2,Failed_login
+Dec 10 07:28:12 LabSZ 24251 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:12 LabSZ 24253 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:14 LabSZ 24253 Failed password for root from 112.95.230.3 port 59849 ssh2,Failed_login
+Dec 10 07:28:14 LabSZ 24253 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:14 LabSZ 24255 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:16 LabSZ 24255 Failed password for root from 112.95.230.3 port 32977 ssh2,Failed_login
+Dec 10 07:28:16 LabSZ 24255 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:16 LabSZ 24257 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:18 LabSZ 24257 Failed password for root from 112.95.230.3 port 35113 ssh2,Failed_login
+Dec 10 07:28:18 LabSZ 24257 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:19 LabSZ 24259 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:21 LabSZ 24259 Failed password for root from 112.95.230.3 port 37035 ssh2,Failed_login
+Dec 10 07:28:21 LabSZ 24259 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:21 LabSZ 24261 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:23 LabSZ 24261 Failed password for root from 112.95.230.3 port 39041 ssh2,Failed_login
+Dec 10 07:28:23 LabSZ 24261 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:23 LabSZ 24263 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:25 LabSZ 24263 Failed password for root from 112.95.230.3 port 40388 ssh2,Failed_login
+Dec 10 07:28:25 LabSZ 24263 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:25 LabSZ 24265 Invalid user utsims from 112.95.230.3,Other
+Dec 10 07:28:25 LabSZ 24265 input_userauth_request: invalid user utsims [preauth],Other
+Dec 10 07:28:25 LabSZ 24265 pam_unix(sshd:auth): check pass; user unknown,Other
+Dec 10 07:28:25 LabSZ 24265 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3,Other
+Dec 10 07:28:28 LabSZ 24265 Failed password for invalid user utsims from 112.95.230.3 port 41506 ssh2,Failed_login
+Dec 10 07:28:28 LabSZ 24265 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:28 LabSZ 24267 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:30 LabSZ 24267 Failed password for root from 112.95.230.3 port 42881 ssh2,Failed_login
+Dec 10 07:28:30 LabSZ 24267 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:31 LabSZ 24269 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:33 LabSZ 24269 Failed password for root from 112.95.230.3 port 43981 ssh2,Failed_login
+Dec 10 07:28:33 LabSZ 24269 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:33 LabSZ 24271 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:35 LabSZ 24271 Failed password for root from 112.95.230.3 port 44900 ssh2,Failed_login
+Dec 10 07:28:35 LabSZ 24271 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:35 LabSZ 24273 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+Dec 10 07:28:37 LabSZ 24273 Failed password for root from 112.95.230.3 port 45699 ssh2,Failed_login
+Dec 10 07:28:37 LabSZ 24273 Received disconnect from 112.95.230.3: 11: Bye Bye [preauth],Other
+Dec 10 07:28:37 LabSZ 24275 pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=112.95.230.3  user=root,Other
+"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""12:00:00Z""/></System><EventData><Data Name=""TargetUserName"">usr000</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.0</Data></EventData></Event>",Failed_login
+May 09 12:04:00 ubuntu sshd[7672]: Failed password for usr001 from 203.0.113.11 port 48734 ssh2,Failed_login
+2025-05-09 loginwindow[7211]: User login FAILED for user usr002 (UID 586),Failed_login
+"May 09 2025 12:12:00: %ASA-4-113015: AAA user authentication Rejected : user = usr003 , IP = 203.0.113.33",Failed_login
+"2025/05/09 12:16:00,001801000013,SYSTEM,gplogin,0,2025/05/09 12:16:00,203.0.113.44,10.0.0.1,Login,globalprotect,user=usr004,tunnel=yes,result=failure",Failed_login
+"{""eventTime"": ""2025-05-09T12:20:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr005""}, ""sourceIPAddress"": ""203.0.113.55"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}",Failed_login
+"{""TimeGenerated"": ""2025-05-09T12:24:00Z"", ""UserPrincipalName"": ""usr006@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.66""}",Failed_login
+timestamp=2025-05-09T12:28:00Z event=login login_type=authorized principal=usr007@example.com ip_address=203.0.113.77 outcome=FAILURE,Failed_login
+"{""published"": ""2025-05-09T12:32:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr008""}, ""client"": {""ipAddress"": ""203.0.113.88""}}",Failed_login
+"""2025-05-09T12:36:00"",""usr009@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.99"",""OAuth""",Failed_login
+"{""CreationTime"": ""2025-05-09T12:40:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr010@example.com"", ""ClientIP"": ""203.0.113.110"", ""ResultStatus"": ""Failed""}",Failed_login
+"2025-05-09T12:44:00 UTC [8688]: [usr011]@hrdb FATAL:  password authentication failed for user ""usr011""",Failed_login
+2025-05-09T12:48:00Z  124 Connect Access denied for user 'usr012'@'203.0.113.132' (using password: YES),Failed_login
+"203.0.113.143 - usr013 [09/May/2025:12:52:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0""",Failed_login
+9.May.2025 12:56:00 SAPR3 DEV100 0 USER_LOGON      usr014 203.0.113.154 FAILURE,Failed_login
+9-MAY-2025 13:00:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.165)(PORT=59546)) * establish * usr015 * rejected,Failed_login
+date=2025-05-09 time=13:04:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr016 ui=ssh action=login status=failure srcip=203.0.113.176,Failed_login
+2025-05-09 13:08:00 srx01 sshd[3973]: Failed password for usr017 from 203.0.113.187 port 42706 ssh2,Failed_login
+"May 10 2025 13:12:00 bigip err tmm[5290]: 01490100:3: AUDIT - user usr018 (partition[Common]) from 203.0.113.198, Unsuccessful login.",Failed_login
+"{""@timestamp"": ""2025-05-09T13:16:00Z"", ""action"": ""user.login"", ""actor"": ""usr019"", ""result"": ""failure"", ""ip"": ""203.0.113.209""}",Failed_login
+"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""13:20:00Z""/></System><EventData><Data Name=""TargetUserName"">usr020</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.220</Data></EventData></Event>",Failed_login
+May 09 13:24:00 ubuntu sshd[1267]: Failed password for usr021 from 203.0.113.231 port 46195 ssh2,Failed_login
+2025-05-09 loginwindow[6955]: User login FAILED for user usr022 (UID 559),Failed_login
+"May 09 2025 13:32:00: %ASA-4-113015: AAA user authentication Rejected : user = usr023 , IP = 203.0.113.253",Failed_login
+"2025/05/09 13:36:00,001801000013,SYSTEM,gplogin,0,2025/05/09 13:36:00,203.0.113.9,10.0.0.1,Login,globalprotect,user=usr024,tunnel=yes,result=failure",Failed_login
+"{""eventTime"": ""2025-05-09T13:40:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr025""}, ""sourceIPAddress"": ""203.0.113.20"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}",Failed_login
+"{""TimeGenerated"": ""2025-05-09T13:44:00Z"", ""UserPrincipalName"": ""usr026@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.31""}",Failed_login
+timestamp=2025-05-09T13:48:00Z event=login login_type=authorized principal=usr027@example.com ip_address=203.0.113.42 outcome=FAILURE,Failed_login
+"{""published"": ""2025-05-09T13:52:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr028""}, ""client"": {""ipAddress"": ""203.0.113.53""}}",Failed_login
+"""2025-05-09T13:56:00"",""usr029@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.64"",""OAuth""",Failed_login
+"{""CreationTime"": ""2025-05-09T14:00:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr030@example.com"", ""ClientIP"": ""203.0.113.75"", ""ResultStatus"": ""Failed""}",Failed_login
+"2025-05-09T14:04:00 UTC [2025]: [usr031]@hrdb FATAL:  password authentication failed for user ""usr031""",Failed_login
+2025-05-09T14:08:00Z  111 Connect Access denied for user 'usr032'@'203.0.113.97' (using password: YES),Failed_login
+"203.0.113.108 - usr033 [09/May/2025:14:12:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0""",Failed_login
+9.May.2025 14:16:00 SAPR3 DEV100 0 USER_LOGON      usr034 203.0.113.119 FAILURE,Failed_login
+9-MAY-2025 14:20:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.130)(PORT=41082)) * establish * usr035 * rejected,Failed_login
+date=2025-05-09 time=14:24:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr036 ui=ssh action=login status=failure srcip=203.0.113.141,Failed_login
+2025-05-09 14:28:00 srx01 sshd[3684]: Failed password for usr037 from 203.0.113.152 port 53731 ssh2,Failed_login
+"May 10 2025 14:32:00 bigip err tmm[3359]: 01490100:3: AUDIT - user usr038 (partition[Common]) from 203.0.113.163, Unsuccessful login.",Failed_login
+"{""@timestamp"": ""2025-05-09T14:36:00Z"", ""action"": ""user.login"", ""actor"": ""usr039"", ""result"": ""failure"", ""ip"": ""203.0.113.174""}",Failed_login
+"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""14:40:00Z""/></System><EventData><Data Name=""TargetUserName"">usr040</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.185</Data></EventData></Event>",Failed_login
+May 09 14:44:00 ubuntu sshd[5770]: Failed password for usr041 from 203.0.113.196 port 52755 ssh2,Failed_login
+2025-05-09 loginwindow[9764]: User login FAILED for user usr042 (UID 531),Failed_login
+"May 09 2025 14:52:00: %ASA-4-113015: AAA user authentication Rejected : user = usr043 , IP = 203.0.113.218",Failed_login
+"2025/05/09 14:56:00,001801000013,SYSTEM,gplogin,0,2025/05/09 14:56:00,203.0.113.229,10.0.0.1,Login,globalprotect,user=usr044,tunnel=yes,result=failure",Failed_login
+"{""eventTime"": ""2025-05-09T15:00:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr045""}, ""sourceIPAddress"": ""203.0.113.240"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}",Failed_login
+"{""TimeGenerated"": ""2025-05-09T15:04:00Z"", ""UserPrincipalName"": ""usr046@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.251""}",Failed_login
+timestamp=2025-05-09T15:08:00Z event=login login_type=authorized principal=usr047@example.com ip_address=203.0.113.7 outcome=FAILURE,Failed_login
+"{""published"": ""2025-05-09T15:12:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr048""}, ""client"": {""ipAddress"": ""203.0.113.18""}}",Failed_login
+"""2025-05-09T15:16:00"",""usr049@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.29"",""OAuth""",Failed_login
+"{""CreationTime"": ""2025-05-09T15:20:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr050@example.com"", ""ClientIP"": ""203.0.113.40"", ""ResultStatus"": ""Failed""}",Failed_login
+"2025-05-09T15:24:00 UTC [2521]: [usr051]@hrdb FATAL:  password authentication failed for user ""usr051""",Failed_login
+2025-05-09T15:28:00Z  68 Connect Access denied for user 'usr052'@'203.0.113.62' (using password: YES),Failed_login
+"203.0.113.73 - usr053 [09/May/2025:15:32:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0""",Failed_login
+9.May.2025 15:36:00 SAPR3 DEV100 0 USER_LOGON      usr054 203.0.113.84 FAILURE,Failed_login
+9-MAY-2025 15:40:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.95)(PORT=48790)) * establish * usr055 * rejected,Failed_login
+date=2025-05-09 time=15:44:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr056 ui=ssh action=login status=failure srcip=203.0.113.106,Failed_login
+2025-05-09 15:48:00 srx01 sshd[6589]: Failed password for usr057 from 203.0.113.117 port 58170 ssh2,Failed_login
+"May 10 2025 15:52:00 bigip err tmm[9752]: 01490100:3: AUDIT - user usr058 (partition[Common]) from 203.0.113.128, Unsuccessful login.",Failed_login
+"{""@timestamp"": ""2025-05-09T15:56:00Z"", ""action"": ""user.login"", ""actor"": ""usr059"", ""result"": ""failure"", ""ip"": ""203.0.113.139""}",Failed_login
+"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""16:00:00Z""/></System><EventData><Data Name=""TargetUserName"">usr060</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.150</Data></EventData></Event>",Failed_login
+May 09 16:04:00 ubuntu sshd[9212]: Failed password for usr061 from 203.0.113.161 port 44132 ssh2,Failed_login
+2025-05-09 loginwindow[1097]: User login FAILED for user usr062 (UID 627),Failed_login
+"May 09 2025 16:12:00: %ASA-4-113015: AAA user authentication Rejected : user = usr063 , IP = 203.0.113.183",Failed_login
+"2025/05/09 16:16:00,001801000013,SYSTEM,gplogin,0,2025/05/09 16:16:00,203.0.113.194,10.0.0.1,Login,globalprotect,user=usr064,tunnel=yes,result=failure",Failed_login
+"{""eventTime"": ""2025-05-09T16:20:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr065""}, ""sourceIPAddress"": ""203.0.113.205"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}",Failed_login
+"{""TimeGenerated"": ""2025-05-09T16:24:00Z"", ""UserPrincipalName"": ""usr066@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.216""}",Failed_login
+timestamp=2025-05-09T16:28:00Z event=login login_type=authorized principal=usr067@example.com ip_address=203.0.113.227 outcome=FAILURE,Failed_login
+"{""published"": ""2025-05-09T16:32:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr068""}, ""client"": {""ipAddress"": ""203.0.113.238""}}",Failed_login
+"""2025-05-09T16:36:00"",""usr069@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.249"",""OAuth""",Failed_login
+"{""CreationTime"": ""2025-05-09T16:40:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr070@example.com"", ""ClientIP"": ""203.0.113.5"", ""ResultStatus"": ""Failed""}",Failed_login
+"2025-05-09T16:44:00 UTC [6279]: [usr071]@hrdb FATAL:  password authentication failed for user ""usr071""",Failed_login
+2025-05-09T16:48:00Z  28 Connect Access denied for user 'usr072'@'203.0.113.27' (using password: YES),Failed_login
+"203.0.113.38 - usr073 [09/May/2025:16:52:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0""",Failed_login
+9.May.2025 16:56:00 SAPR3 DEV100 0 USER_LOGON      usr074 203.0.113.49 FAILURE,Failed_login
+9-MAY-2025 17:00:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.60)(PORT=48140)) * establish * usr075 * rejected,Failed_login
+date=2025-05-09 time=17:04:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr076 ui=ssh action=login status=failure srcip=203.0.113.71,Failed_login
+2025-05-09 17:08:00 srx01 sshd[1799]: Failed password for usr077 from 203.0.113.82 port 45970 ssh2,Failed_login
+"May 10 2025 17:12:00 bigip err tmm[8014]: 01490100:3: AUDIT - user usr078 (partition[Common]) from 203.0.113.93, Unsuccessful login.",Failed_login
+"{""@timestamp"": ""2025-05-09T17:16:00Z"", ""action"": ""user.login"", ""actor"": ""usr079"", ""result"": ""failure"", ""ip"": ""203.0.113.104""}",Failed_login
+"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""17:20:00Z""/></System><EventData><Data Name=""TargetUserName"">usr080</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.115</Data></EventData></Event>",Failed_login
+May 09 17:24:00 ubuntu sshd[4618]: Failed password for usr081 from 203.0.113.126 port 59585 ssh2,Failed_login
+2025-05-09 loginwindow[9259]: User login FAILED for user usr082 (UID 574),Failed_login
+"May 09 2025 17:32:00: %ASA-4-113015: AAA user authentication Rejected : user = usr083 , IP = 203.0.113.148",Failed_login
+"2025/05/09 17:36:00,001801000013,SYSTEM,gplogin,0,2025/05/09 17:36:00,203.0.113.159,10.0.0.1,Login,globalprotect,user=usr084,tunnel=yes,result=failure",Failed_login
+"{""eventTime"": ""2025-05-09T17:40:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr085""}, ""sourceIPAddress"": ""203.0.113.170"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}",Failed_login
+"{""TimeGenerated"": ""2025-05-09T17:44:00Z"", ""UserPrincipalName"": ""usr086@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.181""}",Failed_login
+timestamp=2025-05-09T17:48:00Z event=login login_type=authorized principal=usr087@example.com ip_address=203.0.113.192 outcome=FAILURE,Failed_login
+"{""published"": ""2025-05-09T17:52:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr088""}, ""client"": {""ipAddress"": ""203.0.113.203""}}",Failed_login
+"""2025-05-09T17:56:00"",""usr089@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.214"",""OAuth""",Failed_login
+"{""CreationTime"": ""2025-05-09T18:00:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr090@example.com"", ""ClientIP"": ""203.0.113.225"", ""ResultStatus"": ""Failed""}",Failed_login
+"2025-05-09T18:04:00 UTC [2509]: [usr091]@hrdb FATAL:  password authentication failed for user ""usr091""",Failed_login
+2025-05-09T18:08:00Z  72 Connect Access denied for user 'usr092'@'203.0.113.247' (using password: YES),Failed_login
+"203.0.113.3 - usr093 [09/May/2025:18:12:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0""",Failed_login
+9.May.2025 18:16:00 SAPR3 DEV100 0 USER_LOGON      usr094 203.0.113.14 FAILURE,Failed_login
+9-MAY-2025 18:20:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.25)(PORT=54287)) * establish * usr095 * rejected,Failed_login
+date=2025-05-09 time=18:24:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr096 ui=ssh action=login status=failure srcip=203.0.113.36,Failed_login
+2025-05-09 18:28:00 srx01 sshd[4467]: Failed password for usr097 from 203.0.113.47 port 47907 ssh2,Failed_login
+"May 10 2025 18:32:00 bigip err tmm[4410]: 01490100:3: AUDIT - user usr098 (partition[Common]) from 203.0.113.58, Unsuccessful login.",Failed_login
+"{""@timestamp"": ""2025-05-09T18:36:00Z"", ""action"": ""user.login"", ""actor"": ""usr099"", ""result"": ""failure"", ""ip"": ""203.0.113.69""}",Failed_login
+"<Event><System><EventID>4624</EventID></System><EventData><Data Name=""SubjectUserName"">user000</Data><Data Name=""IpAddress"">192.0.2.0</Data></EventData></Event>",Success_login
+May 08 12:03:00 ubuntu sshd[2584]: Accepted password for user001 from 192.0.2.7 port 51763 ssh2,Success_login
+2025-05-08 loginwindow[5333]: User login succeeded for user user002 (UID 559),Success_login
+May 08 2025 12:09:00: %ASA-6-722051: VPN Login: User=user003 IP=192.0.2.21 Duration=00:00:00 GroupPolicy=vpngroup,Success_login
+"2025/05/08 12:12:00,001801000013,SYSTEM,gplogin,0,2025/05/08 12:12:00,192.0.2.28,10.0.0.1,Login,globalprotect,user=user004,tunnel=yes,result=success",Success_login
+"{""eventTime"": ""2025-05-08T12:15:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""user005""}, ""sourceIPAddress"": ""192.0.2.35"", ""responseElements"": {""ConsoleLogin"": ""Success""}}",Success_login
+"{""TimeGenerated"": ""2025-05-08T12:18:00Z"", ""UserPrincipalName"": ""user006@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""0"", ""additionalDetails"": ""Success""}, ""IPAddress"": ""192.0.2.42""}",Success_login
+timestamp=2025-05-08T12:21:00Z event=login login_type=authorized principal=user007@example.com ip_address=192.0.2.49 outcome=SUCCESS,Success_login
+"{""published"": ""2025-05-08T12:24:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""SUCCESS""}, ""actor"": {""displayName"": ""user008""}, ""client"": {""ipAddress"": ""192.0.2.56""}}",Success_login
+"""2025-05-08T12:27:00"",""user009@example.com"",""Login"",""login.salesforce.com"",""Successful"",""192.0.2.63"",""OAuth""",Success_login
+"{""CreationTime"": ""2025-05-08T12:30:00"", ""Operation"": ""UserLoggedIn"", ""UserId"": ""user010@example.com"", ""ClientIP"": ""192.0.2.70"", ""ResultStatus"": ""Succeeded""}",Success_login
+2025-05-08T12:33:00 UTC [3803]: [user011]@hrdb LOG:  connection authorized: user=user011 database=hrdb SSL enabled,Success_login
+2025-05-08T12:36:00Z  49 Connect user012@192.0.2.84 on payrolldb,Success_login
+"192.0.2.91 - user013 [08/May/2025:12:39:00 +0000] ""POST /login HTTP/1.1"" 302 518 ""-"" ""Mozilla/5.0""",Success_login
+8.May.2025 12:42:00 SAPR3 DEV100 0 USER_LOGON      user014 192.0.2.98 SUCCESS,Success_login
+8-MAY-2025 12:45:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=192.0.2.105)(PORT=48773)) * establish * user015 * 0,Success_login
+date=2025-05-08 time=12:48:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=notice vd=root user=user016 ui=ssh action=login status=success srcip=192.0.2.112,Success_login
+2025-05-08 12:51:00 srx01 sshd[7482]: Accepted password for user017 from 192.0.2.119 port 55035 ssh2,Success_login
+"May 10 2025 12:54:00 bigip notice tmm[3287]: 01490100:5: AUDIT - user user018 (partition[Common]) from 192.0.2.126, Successful login.",Success_login
+"{""@timestamp"": ""2025-05-08T12:57:00Z"", ""action"": ""user.login"", ""actor"": ""user019"", ""result"": ""success"", ""ip"": ""192.0.2.133""}",Success_login
+"<Event><System><EventID>4624</EventID></System><EventData><Data Name=""SubjectUserName"">user020</Data><Data Name=""IpAddress"">192.0.2.140</Data></EventData></Event>",Success_login
+May 08 13:03:00 ubuntu sshd[4593]: Accepted password for user021 from 192.0.2.147 port 44532 ssh2,Success_login
+2025-05-08 loginwindow[2489]: User login succeeded for user user022 (UID 520),Success_login
+May 08 2025 13:09:00: %ASA-6-722051: VPN Login: User=user023 IP=192.0.2.161 Duration=00:00:00 GroupPolicy=vpngroup,Success_login
+"2025/05/08 13:12:00,001801000013,SYSTEM,gplogin,0,2025/05/08 13:12:00,192.0.2.168,10.0.0.1,Login,globalprotect,user=user024,tunnel=yes,result=success",Success_login
+"{""eventTime"": ""2025-05-08T13:15:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""user025""}, ""sourceIPAddress"": ""192.0.2.175"", ""responseElements"": {""ConsoleLogin"": ""Success""}}",Success_login
+"{""TimeGenerated"": ""2025-05-08T13:18:00Z"", ""UserPrincipalName"": ""user026@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""0"", ""additionalDetails"": ""Success""}, ""IPAddress"": ""192.0.2.182""}",Success_login
+timestamp=2025-05-08T13:21:00Z event=login login_type=authorized principal=user027@example.com ip_address=192.0.2.189 outcome=SUCCESS,Success_login
+"{""published"": ""2025-05-08T13:24:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""SUCCESS""}, ""actor"": {""displayName"": ""user028""}, ""client"": {""ipAddress"": ""192.0.2.196""}}",Success_login
+"""2025-05-08T13:27:00"",""user029@example.com"",""Login"",""login.salesforce.com"",""Successful"",""192.0.2.203"",""OAuth""",Success_login
+"{""CreationTime"": ""2025-05-08T13:30:00"", ""Operation"": ""UserLoggedIn"", ""UserId"": ""user030@example.com"", ""ClientIP"": ""192.0.2.210"", ""ResultStatus"": ""Succeeded""}",Success_login
+2025-05-08T13:33:00 UTC [3927]: [user031]@hrdb LOG:  connection authorized: user=user031 database=hrdb SSL enabled,Success_login
+2025-05-08T13:36:00Z  78 Connect user032@192.0.2.224 on payrolldb,Success_login
+"192.0.2.231 - user033 [08/May/2025:13:39:00 +0000] ""POST /login HTTP/1.1"" 302 518 ""-"" ""Mozilla/5.0""",Success_login
+8.May.2025 13:42:00 SAPR3 DEV100 0 USER_LOGON      user034 192.0.2.238 SUCCESS,Success_login
+8-MAY-2025 13:45:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=192.0.2.245)(PORT=56010)) * establish * user035 * 0,Success_login
+date=2025-05-08 time=13:48:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=notice vd=root user=user036 ui=ssh action=login status=success srcip=192.0.2.252,Success_login
+2025-05-08 13:51:00 srx01 sshd[4946]: Accepted password for user037 from 192.0.2.4 port 58591 ssh2,Success_login
+"May 10 2025 13:54:00 bigip notice tmm[8962]: 01490100:5: AUDIT - user user038 (partition[Common]) from 192.0.2.11, Successful login.",Success_login
+"{""@timestamp"": ""2025-05-08T13:57:00Z"", ""action"": ""user.login"", ""actor"": ""user039"", ""result"": ""success"", ""ip"": ""192.0.2.18""}",Success_login
+"<Event><System><EventID>4624</EventID></System><EventData><Data Name=""SubjectUserName"">user040</Data><Data Name=""IpAddress"">192.0.2.25</Data></EventData></Event>",Success_login
+May 08 14:03:00 ubuntu sshd[9645]: Accepted password for user041 from 192.0.2.32 port 59876 ssh2,Success_login
+2025-05-08 loginwindow[9835]: User login succeeded for user user042 (UID 540),Success_login
+May 08 2025 14:09:00: %ASA-6-722051: VPN Login: User=user043 IP=192.0.2.46 Duration=00:00:00 GroupPolicy=vpngroup,Success_login
+"2025/05/08 14:12:00,001801000013,SYSTEM,gplogin,0,2025/05/08 14:12:00,192.0.2.53,10.0.0.1,Login,globalprotect,user=user044,tunnel=yes,result=success",Success_login
+"{""eventTime"": ""2025-05-08T14:15:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""user045""}, ""sourceIPAddress"": ""192.0.2.60"", ""responseElements"": {""ConsoleLogin"": ""Success""}}",Success_login
+"{""TimeGenerated"": ""2025-05-08T14:18:00Z"", ""UserPrincipalName"": ""user046@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""0"", ""additionalDetails"": ""Success""}, ""IPAddress"": ""192.0.2.67""}",Success_login
+timestamp=2025-05-08T14:21:00Z event=login login_type=authorized principal=user047@example.com ip_address=192.0.2.74 outcome=SUCCESS,Success_login
+"{""published"": ""2025-05-08T14:24:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""SUCCESS""}, ""actor"": {""displayName"": ""user048""}, ""client"": {""ipAddress"": ""192.0.2.81""}}",Success_login
+"""2025-05-08T14:27:00"",""user049@example.com"",""Login"",""login.salesforce.com"",""Successful"",""192.0.2.88"",""OAuth""",Success_login
+"{""CreationTime"": ""2025-05-08T14:30:00"", ""Operation"": ""UserLoggedIn"", ""UserId"": ""user050@example.com"", ""ClientIP"": ""192.0.2.95"", ""ResultStatus"": ""Succeeded""}",Success_login
+2025-05-08T14:33:00 UTC [8953]: [user051]@hrdb LOG:  connection authorized: user=user051 database=hrdb SSL enabled,Success_login
+2025-05-08T14:36:00Z  61 Connect user052@192.0.2.109 on payrolldb,Success_login
+"192.0.2.116 - user053 [08/May/2025:14:39:00 +0000] ""POST /login HTTP/1.1"" 302 518 ""-"" ""Mozilla/5.0""",Success_login
+8.May.2025 14:42:00 SAPR3 DEV100 0 USER_LOGON      user054 192.0.2.123 SUCCESS,Success_login
+8-MAY-2025 14:45:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=192.0.2.130)(PORT=41775)) * establish * user055 * 0,Success_login
+date=2025-05-08 time=14:48:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=notice vd=root user=user056 ui=ssh action=login status=success srcip=192.0.2.137,Success_login
+2025-05-08 14:51:00 srx01 sshd[6559]: Accepted password for user057 from 192.0.2.144 port 43580 ssh2,Success_login
+"May 10 2025 14:54:00 bigip notice tmm[4116]: 01490100:5: AUDIT - user user058 (partition[Common]) from 192.0.2.151, Successful login.",Success_login
+"{""@timestamp"": ""2025-05-08T14:57:00Z"", ""action"": ""user.login"", ""actor"": ""user059"", ""result"": ""success"", ""ip"": ""192.0.2.158""}",Success_login
+"<Event><System><EventID>4624</EventID></System><EventData><Data Name=""SubjectUserName"">user060</Data><Data Name=""IpAddress"">192.0.2.165</Data></EventData></Event>",Success_login
+May 08 15:03:00 ubuntu sshd[2604]: Accepted password for user061 from 192.0.2.172 port 41657 ssh2,Success_login
+2025-05-08 loginwindow[1241]: User login succeeded for user user062 (UID 531),Success_login
+May 08 2025 15:09:00: %ASA-6-722051: VPN Login: User=user063 IP=192.0.2.186 Duration=00:00:00 GroupPolicy=vpngroup,Success_login
+"2025/05/08 15:12:00,001801000013,SYSTEM,gplogin,0,2025/05/08 15:12:00,192.0.2.193,10.0.0.1,Login,globalprotect,user=user064,tunnel=yes,result=success",Success_login
+"{""eventTime"": ""2025-05-08T15:15:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""user065""}, ""sourceIPAddress"": ""192.0.2.200"", ""responseElements"": {""ConsoleLogin"": ""Success""}}",Success_login
+"{""TimeGenerated"": ""2025-05-08T15:18:00Z"", ""UserPrincipalName"": ""user066@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""0"", ""additionalDetails"": ""Success""}, ""IPAddress"": ""192.0.2.207""}",Success_login
+timestamp=2025-05-08T15:21:00Z event=login login_type=authorized principal=user067@example.com ip_address=192.0.2.214 outcome=SUCCESS,Success_login
+"{""published"": ""2025-05-08T15:24:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""SUCCESS""}, ""actor"": {""displayName"": ""user068""}, ""client"": {""ipAddress"": ""192.0.2.221""}}",Success_login
+"""2025-05-08T15:27:00"",""user069@example.com"",""Login"",""login.salesforce.com"",""Successful"",""192.0.2.228"",""OAuth""",Success_login
+"{""CreationTime"": ""2025-05-08T15:30:00"", ""Operation"": ""UserLoggedIn"", ""UserId"": ""user070@example.com"", ""ClientIP"": ""192.0.2.235"", ""ResultStatus"": ""Succeeded""}",Success_login
+2025-05-08T15:33:00 UTC [6138]: [user071]@hrdb LOG:  connection authorized: user=user071 database=hrdb SSL enabled,Success_login
+2025-05-08T15:36:00Z  68 Connect user072@192.0.2.249 on payrolldb,Success_login
+"192.0.2.1 - user073 [08/May/2025:15:39:00 +0000] ""POST /login HTTP/1.1"" 302 518 ""-"" ""Mozilla/5.0""",Success_login
+8.May.2025 15:42:00 SAPR3 DEV100 0 USER_LOGON      user074 192.0.2.8 SUCCESS,Success_login
+8-MAY-2025 15:45:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=192.0.2.15)(PORT=53230)) * establish * user075 * 0,Success_login
+date=2025-05-08 time=15:48:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=notice vd=root user=user076 ui=ssh action=login status=success srcip=192.0.2.22,Success_login
+2025-05-08 15:51:00 srx01 sshd[2343]: Accepted password for user077 from 192.0.2.29 port 53737 ssh2,Success_login
+"May 10 2025 15:54:00 bigip notice tmm[9565]: 01490100:5: AUDIT - user user078 (partition[Common]) from 192.0.2.36, Successful login.",Success_login
+"{""@timestamp"": ""2025-05-08T15:57:00Z"", ""action"": ""user.login"", ""actor"": ""user079"", ""result"": ""success"", ""ip"": ""192.0.2.43""}",Success_login
+"<Event><System><EventID>4624</EventID></System><EventData><Data Name=""SubjectUserName"">user080</Data><Data Name=""IpAddress"">192.0.2.50</Data></EventData></Event>",Success_login
+May 08 16:03:00 ubuntu sshd[5915]: Accepted password for user081 from 192.0.2.57 port 54982 ssh2,Success_login
+2025-05-08 loginwindow[2188]: User login succeeded for user user082 (UID 580),Success_login
+May 08 2025 16:09:00: %ASA-6-722051: VPN Login: User=user083 IP=192.0.2.71 Duration=00:00:00 GroupPolicy=vpngroup,Success_login
+"2025/05/08 16:12:00,001801000013,SYSTEM,gplogin,0,2025/05/08 16:12:00,192.0.2.78,10.0.0.1,Login,globalprotect,user=user084,tunnel=yes,result=success",Success_login
+"{""eventTime"": ""2025-05-08T16:15:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""user085""}, ""sourceIPAddress"": ""192.0.2.85"", ""responseElements"": {""ConsoleLogin"": ""Success""}}",Success_login
+"{""TimeGenerated"": ""2025-05-08T16:18:00Z"", ""UserPrincipalName"": ""user086@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""0"", ""additionalDetails"": ""Success""}, ""IPAddress"": ""192.0.2.92""}",Success_login
+timestamp=2025-05-08T16:21:00Z event=login login_type=authorized principal=user087@example.com ip_address=192.0.2.99 outcome=SUCCESS,Success_login
+"{""published"": ""2025-05-08T16:24:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""SUCCESS""}, ""actor"": {""displayName"": ""user088""}, ""client"": {""ipAddress"": ""192.0.2.106""}}",Success_login
+"""2025-05-08T16:27:00"",""user089@example.com"",""Login"",""login.salesforce.com"",""Successful"",""192.0.2.113"",""OAuth""",Success_login
+"{""CreationTime"": ""2025-05-08T16:30:00"", ""Operation"": ""UserLoggedIn"", ""UserId"": ""user090@example.com"", ""ClientIP"": ""192.0.2.120"", ""ResultStatus"": ""Succeeded""}",Success_login
+2025-05-08T16:33:00 UTC [3546]: [user091]@hrdb LOG:  connection authorized: user=user091 database=hrdb SSL enabled,Success_login
+2025-05-08T16:36:00Z  27 Connect user092@192.0.2.134 on payrolldb,Success_login
+"192.0.2.141 - user093 [08/May/2025:16:39:00 +0000] ""POST /login HTTP/1.1"" 302 518 ""-"" ""Mozilla/5.0""",Success_login
+8.May.2025 16:42:00 SAPR3 DEV100 0 USER_LOGON      user094 192.0.2.148 SUCCESS,Success_login
+8-MAY-2025 16:45:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=192.0.2.155)(PORT=41444)) * establish * user095 * 0,Success_login
+date=2025-05-08 time=16:48:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=notice vd=root user=user096 ui=ssh action=login status=success srcip=192.0.2.162,Success_login
+2025-05-08 16:51:00 srx01 sshd[8239]: Accepted password for user097 from 192.0.2.169 port 58077 ssh2,Success_login
+"May 10 2025 16:54:00 bigip notice tmm[1158]: 01490100:5: AUDIT - user user098 (partition[Common]) from 192.0.2.176, Successful login.",Success_login
+"{""@timestamp"": ""2025-05-08T16:57:00Z"", ""action"": ""user.login"", ""actor"": ""user099"", ""result"": ""success"", ""ip"": ""192.0.2.183""}",Success_login
