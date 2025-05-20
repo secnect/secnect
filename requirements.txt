@@ -12,5 +12,4 @@ python-dateutil==2.9.0
 functools
 tqdm
 IPython
-gc
 lime
