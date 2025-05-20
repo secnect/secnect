@@ -128,17 +128,18 @@ def main():
             if st.button("🔍 Analyze Log File", type="primary"):
                 with st.spinner("Analyzing log file..."):
                     # Load model
+                    progress_bar = st.progress(0)
                     model = load_model()
                     
                     # Normalize texts
                     positive_texts = positive_examples_df['normalized_log'].tolist()
                     normalized_log_lines = [normalize_text(line) for line in log_lines]
-                    
+                    progress_bar = st.progress(45)
                     # Compute similarities
                     max_similarities, most_similar_idx = compute_similarities(
                         model, positive_texts, normalized_log_lines
                     )
-                    
+                    progress_bar = st.progress(100)
                     # Build and sort results
                     results_df = build_results_df(
                         log_lines,
