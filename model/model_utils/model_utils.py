@@ -28,7 +28,7 @@ def normalize_text(text: str) -> str:
     return ' '.join(text.split())
 
 @st.cache_data
-def load_positive_examples(csv_path: str = '../data/sample-logs/failed_login_logs.csv') -> pd.DataFrame:
+def load_positive_examples(csv_path: str = '..data/sample-logs/failed_login_logs.csv') -> pd.DataFrame:
     try:
         df = pd.read_csv(csv_path)
     except FileNotFoundError:
