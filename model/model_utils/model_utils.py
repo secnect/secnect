@@ -3,13 +3,17 @@ import numpy as np
 import re
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-import streamlit as st  # only for @st.cache_resource / @st.cache_data decorators
+import streamlit as st
 from sentence_transformers import util
 from sklearn.feature_extraction.text import TfidfVectorizer
 from Levenshtein import ratio as levenshtein_ratio
+from model.model_utils.secbert_model import get_secbert_analyzer  # Import the new SecBERT analyzer
 
 @st.cache_resource
 def load_model(model_name: str = 'all-MiniLM-L6-v2') -> SentenceTransformer:
+    """Load either the default model or SecBERT based on model_name"""
+    if model_name.lower() == 'secbert':
+        return get_secbert_analyzer()
     return SentenceTransformer(model_name)
 
 def normalize_text(text: str) -> str:
@@ -39,14 +43,25 @@ def load_positive_examples(csv_path: str = 'data/sample-logs/failed_login_logs.c
 
 def compute_similarities(model: SentenceTransformer, positive_texts: list[str], target_texts: list[str]) -> tuple[np.ndarray, np.ndarray]:
     """Return (max_similarities, argmax_indices)."""
-    pos_emb = model.encode(positive_texts)
-    tgt_emb = model.encode(target_texts)
-    sims = cosine_similarity(tgt_emb, pos_emb)
-    max_sim = np.max(sims, axis=1)
-    argmax = np.argmax(sims, axis=1)
-    return max_sim, argmax
+    if isinstance(model, SentenceTransformer):
+        # Original similarity computation
+        pos_emb = model.encode(positive_texts)
+        tgt_emb = model.encode(target_texts)
+        sims = cosine_similarity(tgt_emb, pos_emb)
+        max_sim = np.max(sims, axis=1)
+        argmax = np.argmax(sims, axis=1)
+        return max_sim, argmax
+    else:
+        # SecBERT analyzer - return dummy values since SecBERT handles classification differently
+        return np.zeros(len(target_texts)), np.zeros(len(target_texts))
 
 def build_results_df(original_lines: list[str], normalized_lines: list[str], max_sim: np.ndarray, argmax: np.ndarray, positive_df: pd.DataFrame) -> pd.DataFrame:
+    """Build results dataframe, handling both similarity and SecBERT cases"""
+    if isinstance(positive_df, str) and positive_df == "SecBERT":
+        # For SecBERT, the input is already a DataFrame with analysis results
+        return normalized_lines  # In SecBERT case, normalized_lines is actually the results_df
+    
+    # Original similarity-based processing
     df = pd.DataFrame({
         'original_log_line': original_lines,
         'normalized_log_line': normalized_lines,
@@ -54,13 +69,13 @@ def build_results_df(original_lines: list[str], normalized_lines: list[str], max
         'most_similar_positive_idx': argmax,
         'most_similar_positive_example': [
             positive_df.iloc[i]['Log'] for i in argmax
-        ]
+        ],
+        'prediction': 'Failed login',  # Default for similarity model
+        'model': 'SentenceTransformer'
     })
     
     return df.sort_values('max_similarity_score', ascending=False)
-#
-# Na tomhle ještě zapracovat
-#
+
 def get_similarity_breakdown(model, log_line, positive_example):
     """Return a dictionary explaining similarity components"""
     tokens1 = set(normalize_text(log_line).split())
@@ -85,12 +100,6 @@ def get_similarity_breakdown(model, log_line, positive_example):
         'important_phrases': important_phrases
     }
     
-#
-#
-#
-
-
-
 def enhanced_similarity(text1, text2):
     # Semantic similarity
     model = load_model()
@@ -113,8 +122,6 @@ def enhanced_similarity(text1, text2):
         'combined': 0.5*semantic_sim + 0.3*lexical_sim + 0.2*string_sim
     }
     
-    
-
 def extract_log_fields(log_line):
     """Identify common log components"""
     patterns = {
