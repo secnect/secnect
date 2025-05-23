@@ -63,18 +63,15 @@ def main():
 
     # Sidebar configuration
     st.sidebar.header("Configuration")
-    confidence_threshold = st.sidebar.slider(
-        "Confidence Threshold", 0.0, 1.0, 0.6, 0.05,
-        help="Log lines with similarity scores above this threshold will be highlighted"
-    )
+    confidence_threshold = st.sidebar.slider("Confidence Threshold", 0.0, 1.0, 0.6, 0.05, help="Log lines with similarity scores above this threshold will be highlighted")
+    
     top_n = st.sidebar.number_input("Number of top results to display", 5, 100, 20, 5)
     model_selection = st.sidebar.selectbox("Model selection", MODEL_OPTIONS)
-    
-    
-    st.subheader("Change log*", divider=True)
-    st.markdown("*Added model selection, available models are **:orange[BERT Similarity]** (Default) and **:blue[SecBERT] (New)**")
-    st.markdown("*We’ve added similarity details tailored to each model, and an NER model is coming soon.")
-    st.markdown(" Our models are still under development, and we apologize for any inconvenience.")
+
+    st.sidebar.subheader("Change log*", divider=True)
+    st.sidebar.markdown("*Added model selection, available models are **:orange[BERT Similarity]** (Default) and **:blue[SecBERT] (New)**")
+    st.sidebar.markdown("*We’ve added similarity details tailored to each model, and an NER model is coming soon.")
+    st.sidebar.markdown(" Our models are still under development, and we apologize for any inconvenience.")
 
     # File uploader
     st.header("📁 Upload Log File")
