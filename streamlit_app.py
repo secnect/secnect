@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 import regex as re
 import matplotlib.pyplot as plt
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from lime.lime_text import LimeTextExplainer
+import gc
+from tqdm import tqdm
 
 # Import backend utilities
 from model.model_utils.model_utils import (
@@ -94,7 +99,6 @@ def main():
     with st.expander("View first 5 log lines"):
         for i, l in enumerate(log_lines[:5]): st.text(f"{i+1}: {l}")
         
-    
 
     # Analyze button
     if st.button("🔍 Analyze Log File", type="primary"):
@@ -102,10 +106,13 @@ def main():
             progress = st.progress(0)
 
             # Branch on SecBERT vs similarity
-            if model_selection == "SecBERT model":
-                # SecBERT processing
+            if model_selection == "SecBERT model (New)":
+            # SecBERT processing
                 analyzer = get_secbert_analyzer()
                 df_results = analyzer.analyze_logs(log_lines, confidence_threshold)
+                # Add model column if not present
+                if 'model' not in df_results.columns:
+                    df_results['model'] = "SecBERT"
             else:
                 # Similarity processing
                 progress.progress(10)
@@ -116,6 +123,7 @@ def main():
                 sims, idxs = compute_similarities(sim_model, pos_texts, normalized)
                 progress.progress(80)
                 df_results = build_results_df(log_lines, normalized, sims, idxs, positive_examples_df)
+                df_results['model'] = "BERT Similarity"
             progress.progress(100)
 
         # Display metrics
@@ -126,11 +134,10 @@ def main():
         cols[2].metric("Mean score", f"{df_results['max_similarity_score'].mean():.3f}")
         cols[3].metric("Max score", f"{df_results['max_similarity_score'].max():.3f}")
 
-        # Show top N
         st.subheader(f"Top {top_n} results")
         for _, row in df_results.head(top_n).iterrows():
             score = row['max_similarity_score']
-            highlight_color = 'red' if score>=confidence_threshold else 'orange'
+            highlight_color = 'red' if score >= confidence_threshold else 'orange'
             st.markdown(f"**Score:** :{highlight_color}[{score:.4f}]")
 
             # Common display fields
@@ -138,22 +145,39 @@ def main():
             st.text(row['original_log_line'])
             st.markdown(f"**Normalized Log:**")
             st.text(row.get('normalized_log', normalize_text(row['original_log_line'])))
-
-            # Branch for SecBERT extra attributes
-            if model_selection == "SecBERT model":
-                st.markdown(f"**Prediction:** {row['prediction']}")
-                st.markdown(f"**Explanation:** {row['explanation']}")
-                st.markdown(f"**Model:** {row['model']}")
-            else:
-                # Similarity breakdown
-                breakdown = get_similarity_breakdown(sim_model, row['original_log_line'], row['most_similar_positive_example'])
-                with st.expander("Similarity Details"):
-                    st.markdown("**Common Tokens:**")
-                    st.write(breakdown['common_tokens'])
-                    st.markdown("**Unique to Log:**")
-                    st.write(breakdown['unique_to_log'])
-                    st.markdown("**Unique to Example:**")
-                    st.write(breakdown['unique_to_example'])
+ 
+            with st.expander("Analysis Details"):
+                # Show prediction and confidence for all models
+                st.markdown(f"**Prediction:** {row.get('prediction', 'N/A')}")
+                st.markdown(f"**Confidence:** {score:.4f}")
+                
+                # Model-specific details
+                if row.get('model') == "SecBERT":
+                    # SecBERT specific details
+                    st.markdown("**Model:** SecBERT")
+                    if 'explanation' in row:
+                        st.markdown("**Explanation:**")
+                        st.write(row['explanation'])
+                        
+                        # If it's a pattern match, display it specially
+                        if "Matched" in row['explanation']:
+                            st.markdown("**Pattern Matched:**")
+                            st.code(row['explanation'].split(": ")[1])
+                else:
+                    # Original BERT similarity details
+                    st.markdown("**Model:** BERT Similarity")
+                    if 'most_similar_positive_example' in row:
+                        breakdown = get_similarity_breakdown(
+                            sim_model, 
+                            row['original_log_line'], 
+                            row['most_similar_positive_example']
+                        )
+                        st.markdown("**Common Tokens:**")
+                        st.write(breakdown['common_tokens'])
+                        st.markdown("**Unique to Log:**")
+                        st.write(breakdown['unique_to_log'])
+                        st.markdown("**Unique to Example:**")
+                        st.write(breakdown['unique_to_example'])
             st.divider()
 
         # Distribution plot
@@ -172,9 +196,6 @@ def main():
         csv = df_results.to_csv(index=False)
         st.download_button("Download Full Results", data=csv, file_name="results.csv")
 
-    # Footer
-
-    
     
     st.markdown("---")
     st.markdown('''
