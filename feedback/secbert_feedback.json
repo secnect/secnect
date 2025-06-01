@@ -1,0 +1,38 @@
+[
+  {
+    "log_text": "{\"published\":\"2025-05-18T11:40:29Z\",\"eventType\":\"user.repository.delete\",\"outcome\":{\"result\":\"SUCCESS\"}}",
+    "original_prediction": {
+      "label": "Successful login",
+      "confidence": 1.0
+    },
+    "user_correction": {
+      "label": "other_login",
+      "confidence": 1.0
+    },
+    "timestamp": "2025-05-29 23:38:46.337432"
+  },
+  {
+    "log_text": "{\"published\":\"2025-05-18T11:40:29Z\",\"eventType\":\"user.repository.delete\",\"outcome\":{\"result\":\"SUCCESS\"}}",
+    "original_prediction": {
+      "label": "Successful login",
+      "confidence": 1.0
+    },
+    "user_correction": {
+      "label": "other_login",
+      "confidence": 1.0
+    },
+    "timestamp": "2025-05-30 00:25:32.239341"
+  },
+  {
+    "log_text": "{\"published\":\"2025-05-18T11:40:29Z\",\"eventType\":\"user.repository.delete\",\"outcome\":{\"result\":\"SUCCESS\"}}",
+    "original_prediction": {
+      "label": "Successful login",
+      "confidence": 1.0
+    },
+    "user_correction": {
+      "label": "other_login",
+      "confidence": 1.0
+    },
+    "timestamp": "2025-05-31 16:52:41.598954"
+  }
+]

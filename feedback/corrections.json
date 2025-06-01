@@ -1,0 +1,32 @@
+[
+  {
+    "log_text": "{\"published\":\"2025-05-18T11:40:29Z\",\"eventType\":\"user.repository.delete\",\"outcome\":{\"result\":\"SUCCESS\"}}",
+    "original_prediction": {
+      "label": "Successful login",
+      "confidence": 1.0
+    },
+    "user_correction": {
+      "label": "other_login",
+      "confidence": 1.0
+    },
+    "timestamp": "2025-05-31 18:42:26.947990",
+    "record_id": "5fda09081f1d",
+    "used_for_training": true,
+    "training_timestamp": "2025-06-01 18:09:09.614726"
+  },
+  {
+    "log_text": "{\"published\":\"2025-05-18T11:40:29Z\",\"eventType\":\"user.repository.delete\",\"outcome\":{\"result\":\"SUCCESS\"}}",
+    "original_prediction": {
+      "label": "Successful login",
+      "confidence": 1.0
+    },
+    "user_correction": {
+      "label": "other_login",
+      "confidence": 1.0
+    },
+    "timestamp": "2025-06-01 18:08:26.818453",
+    "record_id": "ebb9b41934b2",
+    "used_for_training": true,
+    "training_timestamp": "2025-06-01 18:09:09.614726"
+  }
+]
