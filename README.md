@@ -1,8 +1,70 @@
-# 🔐 Failed Login Detector
+# 🔐 Login Event Detector
 
-A Streamlit application that uses semantic similarity to identify potential failed login events in log files using Sentence-BERT embeddings.
+A Streamlit application that utilizes semantic similarity of pre-trained SecBERT for recognition of Login Event type Security logs
 
 ![Demo](assets/demo.gif)
+
+Project structure 
+├── Data/
+│   ├── created-logs/
+│   ├── raw-logs/
+│   ├── sample-logs/
+│   ├── train-logs/
+│   └── log_preprocessing.ipynb
+│
+├── Feedback/
+│   ├── corrections.json
+│   └── secbert_feedback.json
+│
+├── Model/
+│   ├── annotated_logs.txt
+│   ├── BERT_clayrity.ipynb
+│   ├── SecBERT_puvodni.ipynb
+│   ├── SecBERT_test_lepsi.ipynb
+│   └── model_utils/
+│       ├── giga_dataset_gen.py
+│       ├── model_utils.py
+│       └── secbert_model.py
+│
+├── enhanced_dataset_generator.py
+├── feature_bert - experiment.py
+├── pokus_NER_LSTM_funny_mvp.py
+├── README.md
+├── requirements.txt
+└── streamlit_app.py
+
+
+
+- Data
+    - created-logs (output file of giga_dataset_gen.py for SecBERT finetuning)
+    - raw-logs (raw form of logs from LogHub repository, features Linux, SSH logs)
+    - sample-logs (consists of 100 examples of login events (failed/success))
+    - train-logs (folder that was used during testing the past iteration of BERT models)
+    - log_preprocessing.ipynb (self explanatory)
+
+- Feedback
+    -
+    -
+
+- Model
+    - annotated_logs.txt
+    - BERT_clayrity.ipynb
+    - SecBERT_puvodni.ipynb
+    - SecBERT_test_lepsi.ipynb
+    - model_utils
+        - giga_dataset_gen.py
+        - model_utils.py
+        - secbert_model.py
+
+- enhanced_dataset_generator.py 
+- feature_bert - experiment.py
+- pokus_NER_LSTM_funny_mvp.py
+- README.md
+- requirements.txt (musel jsem addnout tf-keras protože teď updatnuli package a rozmrdalo se to)
+- streamlit_app.py
+
+
+
 
 ## 🌟 Features
 

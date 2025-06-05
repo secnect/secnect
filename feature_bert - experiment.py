@@ -54,13 +54,19 @@ class BERTLogParser:
         """Load pretrained BERT model and tokenizer"""
         try:
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+            if self.tokenizer.pad_token is None:
+                if self.tokenizer.eos_token is not None:
+                    self.tokenizer.pad_token = self.tokenizer.eos_token                
+            else:
+                self.tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+                
             self.model = AutoModel.from_pretrained(self.model_name)
             return True
         except Exception as e:
             st.error(f"Error loading model {self.model_name}: {str(e)}")
             return False
     
-    def get_bert_embeddings(self, texts, max_length=512):
+    def get_bert_embeddings(self, texts, max_length=256):
         """
         Generate BERT embeddings for input texts.
         
@@ -239,7 +245,7 @@ class BERTLogParser:
         # Common event indicators
         event_keywords = [
             'started', 'stopped', 'failed', 'error', 'completed', 'initialized',
-            'connected', 'disconnected', 'timeout', 'exception', 'warning'
+            'connected', 'disconnected', 'timeout', 'exception', 'warning',
         ]
         
         event_type = None
