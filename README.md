@@ -4,6 +4,7 @@ A Streamlit application that utilizes semantic similarity of pre-trained SecBERT
 
 ![Demo](assets/demo.gif)
 
+<pre> ```
 project-root/
 ├── Data/
 │   ├── created-logs/                # Output of giga_dataset_gen.py for SecBERT fine-tuning
@@ -31,7 +32,7 @@ project-root/
 ├── README.md
 ├── requirements.txt                # Added tf-keras due to recent package update
 └── streamlit_app.py
-
+``` </pre>
 
 
 
