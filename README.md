@@ -4,17 +4,16 @@ A Streamlit application that utilizes semantic similarity of pre-trained SecBERT
 
 ![Demo](assets/demo.gif)
 
-Project structure 
+project-root/
 ├── Data/
-│   ├── created-logs/
-│   ├── raw-logs/
-│   ├── sample-logs/
-│   ├── train-logs/
+│   ├── created-logs/                # Output of giga_dataset_gen.py for SecBERT fine-tuning
+│   ├── raw-logs/                    # Raw logs from LogHub (Linux, SSH)
+│   ├── sample-logs/                 # 100 examples of login events (failed/success)
+│   ├── train-logs/                  # Used during testing of previous BERT model iterations
 │   └── log_preprocessing.ipynb
 │
 ├── Feedback/
-│   ├── corrections.json
-│   └── secbert_feedback.json
+│   └──                              # (Empty or to be populated)
 │
 ├── Model/
 │   ├── annotated_logs.txt
@@ -30,8 +29,9 @@ Project structure
 ├── feature_bert - experiment.py
 ├── pokus_NER_LSTM_funny_mvp.py
 ├── README.md
-├── requirements.txt
+├── requirements.txt                # Added tf-keras due to recent package update
 └── streamlit_app.py
+
 
 
 
