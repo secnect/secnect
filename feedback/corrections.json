@@ -28,5 +28,19 @@
     "record_id": "ebb9b41934b2",
     "used_for_training": true,
     "training_timestamp": "2025-06-01 18:09:09.614726"
+  },
+  {
+    "log_text": "May 18 09:05:23 ubuntu sshd[3456]: Accepted password for user1",
+    "original_prediction": {
+      "label": "Non-login event",
+      "confidence": 0.862301230430603
+    },
+    "user_correction": {
+      "label": "successful_login",
+      "confidence": 1.0
+    },
+    "timestamp": "2025-06-07 01:14:05.578696",
+    "record_id": "3e96e245d1fd",
+    "used_for_training": false
   }
 ]

@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List, Dict, Tuple
 import os
 
-from model.model_utils.giga_dataset_gen import LogGenerator
+from giga_dataset_gen import LogGenerator
 
 class EnhancedDatasetGenerator(LogGenerator):
     """Enhanced dataset generator that incorporates user corrections"""

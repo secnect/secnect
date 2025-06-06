@@ -1,0 +1,31 @@
+{
+    "model_name": "bert-base-uncased",
+    "class_names": ["Non-login event", "Failed login", "Successful login"],
+    "embedding_dim": 768,
+    "max_length": 128,
+    "thresholds": {
+        "login_detection": 0.15,
+        "classification": 0.3,
+        "high_confidence": 0.6,
+        "medium_confidence": 0.4,
+        "model_confidence": 0.8
+    },
+    "prototype_categories": ["successful_login", "failed_login", "non_login"],
+    "prototype_templates": {
+        "successful_login": ["authenticated", "accepted", "successful", "verified", "granted", "established"],
+        "failed_login": ["failed", "denied", "invalid", "incorrect", "error", "failure"],
+        "non_login": ["started", "running", "established", "completed", "normal", "transfer"]
+    },
+    "normalization_patterns": [
+        ["\\d+", ""],
+        ["[{}[\\]\":,]", " "],
+        ["(?<=[a-zA-Z])(?=[A-Z])", " "]
+    ],
+    "term_normalizations": {
+        "\\bssh\\w*": "ssh",
+        "\\blogin\\w*": "login",
+        "\\bauth\\w*": "authentication",
+        "\\bfail\\w*": "failed",
+        "\\bsuccess\\w*": "successful"
+    }
+}

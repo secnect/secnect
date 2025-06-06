@@ -7,11 +7,10 @@ import streamlit as st
 from sentence_transformers import util
 from sklearn.feature_extraction.text import TfidfVectorizer
 from Levenshtein import ratio as levenshtein_ratio
-from model.model_utils.secbert_model import get_secbert_analyzer  # Import the new SecBERT analyzer
+from model.bert_model import get_secbert_analyzer  # Import the new SecBERT analyzer
 
 @st.cache_resource
-def load_model(model_name: str = 'all-MiniLM-L6-v2') -> SentenceTransformer:
-    """Load either the default model or SecBERT based on model_name"""
+def load_model(model_name: str = 'bert-base-uncased') -> SentenceTransformer:
     if model_name.lower() == 'secbert':
         return get_secbert_analyzer()
     return SentenceTransformer(model_name)
@@ -21,18 +20,27 @@ def normalize_text(text: str) -> str:
         return ""
     text = str(text)
     # strip timestamps
-    text = re.sub(r'\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}', '', text)
+    text = re.sub(r'\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}Z?', '', text)
     text = re.sub(r'\d{2}/\d{2}/\d{4}\s\d{2}:\d{2}:\d{2}', '', text)
     text = re.sub(r'\d{1,2}/\d{1,2}/\d{2,4}', '', text)
     text = re.sub(r'\d{2}:\d{2}:\d{2}', '', text)
-    # strip IPs, ports, standalone numbers
+
+    # Remove IP addresses and ports
     text = re.sub(r'\b\d{1,3}(?:\.\d{1,3}){3}\b', '', text)
     text = re.sub(r':\d{1,5}\b', '', text)
+
+    # Remove standalone numbers
     text = re.sub(r'\b\d+\b', '', text)
+
+    # Remove braces, brackets, quotes, colons, commas
+    text = re.sub(r'[{}[\]":,]', ' ', text)
+    text = re.sub(r'(?<=[a-zA-Z])(?=[A-Z])', ' ', text)
+    text = text.lower()
+    # Collapse multiple spaces and strip
     return ' '.join(text.split())
 
 @st.cache_data
-def load_positive_examples(csv_path: str = 'data/sample-logs/failed_login_logs.csv') -> pd.DataFrame:
+def load_positive_examples(csv_path: str = 'data/sample-logs/log_samples.csv') -> pd.DataFrame:
     try:
         df = pd.read_csv(csv_path)
     except FileNotFoundError:
@@ -52,7 +60,6 @@ def compute_similarities(model: SentenceTransformer, positive_texts: list[str], 
         argmax = np.argmax(sims, axis=1)
         return max_sim, argmax
     else:
-        # SecBERT analyzer - return dummy values since SecBERT handles classification differently
         return np.zeros(len(target_texts)), np.zeros(len(target_texts))
 
 def build_results_df(original_lines: list[str], normalized_lines: list[str], max_sim: np.ndarray, argmax: np.ndarray, positive_df: pd.DataFrame) -> pd.DataFrame:
@@ -101,18 +108,17 @@ def get_similarity_breakdown(model, log_line, positive_example):
     }
     
 def enhanced_similarity(text1, text2):
-    # Semantic similarity
+    
     model = load_model()
     emb1 = model.encode(text1)
     emb2 = model.encode(text2)
     semantic_sim = util.cos_sim(emb1, emb2)
     
-    # Lexical similarity
+
     vectorizer = TfidfVectorizer()
     tfidf = vectorizer.fit_transform([text1, text2])
     lexical_sim = (tfidf * tfidf.T).A[0,1]
     
-    # String similarity
     string_sim = levenshtein_ratio(text1, text2)
     
     return {
@@ -141,24 +147,13 @@ def extract_log_fields(log_line):
     return fields
 
 def highlight_text(text: str, keywords: set) -> str:
-    """
-    Highlight matching keywords in text with HTML markup
-    Args:
-        text: Original text to highlight
-        keywords: Set of keywords/phrases to highlight
-    Returns:
-        HTML string with highlighted portions
-    """
+    
     if not keywords:
         return text
-    
-    # Sort keywords by length (longest first) to handle multi-word phrases
     sorted_keywords = sorted(keywords, key=len, reverse=True)
     
-    # Create a copy to modify
     highlighted = text
     
-    # Highlight each keyword
     for keyword in sorted_keywords:
         if keyword in highlighted:
             highlighted = highlighted.replace(

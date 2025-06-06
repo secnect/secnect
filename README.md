@@ -3,8 +3,10 @@
 A Streamlit application that utilizes semantic similarity of pre-trained SecBERT for recognition of Login Event type Security logs
 
 ![Demo](assets/demo.gif)
-
-<pre> ```
+***
+___
+--- 
+<pre> 
 project-root/
 ├── Data/
 │   ├── created-logs/                # Output of giga_dataset_gen.py for SecBERT fine-tuning
@@ -14,7 +16,8 @@ project-root/
 │   └── log_preprocessing.ipynb
 │
 ├── Feedback/
-│   └──                              # (Empty or to be populated)
+│   ├── corrections.json
+│   └── secbert_feedback.json        # (Empty or to be populated)
 │
 ├── Model/
 │   ├── annotated_logs.txt
@@ -32,9 +35,11 @@ project-root/
 ├── README.md
 ├── requirements.txt                # Added tf-keras due to recent package update
 └── streamlit_app.py
-``` </pre>
-
-
+</pre>
+***
+___
+--- 
+Projekt je rozdělen do několika modulů, které si předávají výstupy v podobě .json souborů. První modul umožňuje prvnotní klasifikaci raw-log souborů dle obsahu logu (1 systém logu) na patřičný Login Event (Success/Failed). Po úspěšné klasifikaci se soubor ukládá do --Musím vymyslet-- a následně je připraven pro zpracování 2. modulem (Log parser). 2. modul obsahuje BiLSTM-CRF - NER model, který je naučen na přístupných log filech a taguje části logu na příslušný a existující atribut. Výstupem 2. modulu je opět .json soubor, který se ve spojení s 1. modulem využívá ve finálním modulu a to Splunk Configuártoru 🤷‍♂️
 
 - Data
     - created-logs (output file of giga_dataset_gen.py for SecBERT finetuning)
