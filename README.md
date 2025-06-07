@@ -2,14 +2,12 @@
 
 A machine learning-powered pipeline for parsing, classifying, and extracting structured data from raw log files to streamline security event onboarding into Splunk.
 
-
 ## 📌 Project Highlights
 
 - Accepts `.log`, `.csv`, and `.txt` files containing security logs
 - Uses BERT for event similarity classification
 - Extracts fields with NER and outputs structured `.json`
 - Integrates with Splunk for security monitoring
-
 
 ## Main problem
 Modern enterprise environments generate massive volumes of authentication logs across diverse systems including internet banking, payment processing, trading platforms, and regulatory reporting systems. Each system produces logs in different formats with varying terminology for the same security events - a failed login might appear as "Login Failed", "Unsuccessful sign in", "Password not matching", "Session rejected", or "Authentication error" depending on the source system
@@ -50,6 +48,19 @@ This workflow supports the ingestion and analysis of log data for security monit
 
 5. **Splunk Integration**  
    The final `.json` file is used to configure Splunk and onboard the parsed logs into the security monitoring application.
+
+
+'''
+Doporučení pro dokumentaci řešení
+• Nevkládejte kompletní kód, ale odkaz do repa (git). Případně použijte pseudokód.
+• Nejde o návod k používání nástroje, ale o dokument vysvětlující architekturu řešení a
+popisující zvolený technologický stack (jaký a proč byl vybrán).
+• Obsahuje zevrubný popis toku dat (data lineage), od vstupu na výstup (k uživateli), popis
+dat včetně zhodnocení kvality, použité transformace, aplikaci algoritmů AI/ML
+• Ukazuje a popisuje hlavní výstupy a frontend.
+• Vysvětluje kompromisy v implementaci a dává doporučení pro další rozvoj.
+• Dále, pokud je to relevantní, stručně popisuje postup pro produkční zavedení ve firmě. 
+'''
 
 
 ## Key Components
@@ -119,7 +130,7 @@ Real-time inference with JSON-formatted output
 - For log parsing, we initially tested our field favorite: **Drain3**. Drain is a state-of-the-art, open-source log parser that performs well on large log files. However, when working with only snippets of logs, it becomes difficult to "decode" the discovered templates accurately, often requiring human intervention for adjustments. After further research and reviewing several studies, **NER models** appeared promising. We tested them on **LogHub** samples, and the results were very encouraging. The fact that **NVIDIA** developed its own "flexible log parser" in collaboration with **Splunk** indicates this approach may be a current field standard or even state-of-the-art. Still, it remains unclear how widely these tools are actually adopted in production.
 - The development of **LLMs** and **chatbots** could further help solve this problem, given their ability to understand semantics and generate structured outputs using well-crafted prompts. However, a major concern with using models like those from **OpenAI** is the risk of hallucinations during prompting, which means extra caution is necessary. Another potential solution is to use **RAG** (Retrieval-Augmented Generation) to support these models with additional context from security documentation and vocabularies. Supplementing with curated sources can reduce hallucinations and improve consistency, especially for cybersecurity-specific events.
 
-## 🌟 Space for Improvement
+## 🌟 Room for Improvement
 - Create a unified pipeline that takes `.log`, `.csv`, or `.txt` files as input and outputs the Splunk configuration — or develop this as a Splunk plugin/module to automate the process and save time.
 - Leverage **NVIDIA Morpheus** parsers and other state-of-the-art tools for log analysis to ensure the highest quality parsing and feature extraction.
 - Integrate a working database or temporary caching system to store user feedback logs. This would allow for ongoing model updates and improvements. For privacy, the logs should be deleted after use if they contain sensitive information — or consider an entirely different approach to feedback handling.
