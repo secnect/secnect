@@ -2,70 +2,70 @@
 
 A Streamlit application that utilizes semantic similarity of pre-trained SecBERT for recognition of Login Event type Security logs
 
-![Demo](assets/demo.gif)
+## Main problem
+Modern enterprise environments generate massive volumes of authentication logs across diverse systems including internet banking, payment processing, trading platforms, and regulatory reporting systems. Each system produces logs in different formats with varying terminology for the same security events - a failed login might appear as "Login Failed", "Unsuccessful sign in", "Password not matching", "Session rejected", or "Authentication error" depending on the source system
+
+<img src="assets/problem.png" width="900">
+
+### Current challenges facing security teams:
+- Each system uses different log formats and terminology
+- Security analysts spend hours manually correlating events across systems
+- Time-consuming manual processes delay incident response
+
+## Solution Overview
+This repository provides an AI-powered log analysis system that uses BERT (Bidirectional Encoder Representations from Transformers) to intelligently classify authentication events across heterogeneous systems. The solution automatically:
+
+Normalizes diverse log formats into standardized classifications
+Understands context using semantic similarity rather than rigid pattern matching
+Learns continuously from security analyst feedback through an integrated correction system
+Provides explanations for each classification decision to support analyst workflow
+Scales efficiently to handle enterprise-volume log processing
+
+## Project structure
 --- 
-<pre> 
-project-root/
-├── Data/
+<pre>streamlit_progress/
+├── data/
 │   ├── created-logs/                # Output of giga_dataset_gen.py for SecBERT fine-tuning
 │   ├── raw-logs/                    # Raw logs from LogHub (Linux, SSH)
 │   ├── sample-logs/                 # 100 examples of login events (failed/success)
 │   ├── train-logs/                  # Used during testing of previous BERT model iterations
 │   └── log_preprocessing.ipynb
 │
-├── Feedback/
+├── feedback/
 │   ├── corrections.json
 │   └── secbert_feedback.json        # (Empty or to be populated)
 │
-├── Model/
+├── model/
 │   ├── annotated_logs.txt
-│   ├── BERT_clayrity.ipynb
-│   ├── SecBERT_puvodni.ipynb
-│   ├── SecBERT_test_lepsi.ipynb
+│   ├── NER/
+│   │    ├── best_ner_model.pth
+│   │    ├── vocabularies.pkl
+│   │    └── test_tokenizer.ipynb 
+│   │
 │   └── model_utils/
 │       ├── giga_dataset_gen.py
 │       ├── model_utils.py
-│       └── secbert_model.py
+│       ├── config.json
+│       └── bert_model.py
 │
-├── enhanced_dataset_generator.py
-├── feature_bert - experiment.py
-├── pokus_NER_LSTM_funny_mvp.py
+├── Streamlit_custom_utils/
+│   ├── corrections_manager.py
+│   ├── log_feedback.py
+│   ├── ner_model.py                # To be added if I remember
+│   └── splunk_configurator.py      # To be added if I remember
+│
 ├── README.md
+├── LICENSE
+├── runtime.txt
 ├── requirements.txt                # Added tf-keras due to recent package update
-└── streamlit_app.py
-</pre>
+└── streamlit_app.py</pre>
 --- 
+
+
+### Work in progress might delete later
 Prostor kde se vypisuju - pak v AJ
 
 Projekt je rozdělen do několika modulů, které si předávají výstupy v podobě .json souborů. První modul umožňuje prvnotní klasifikaci raw-log souborů dle obsahu logu (1 systém logu) na patřičný Login Event (Success/Failed). Po úspěšné klasifikaci se soubor ukládá do --Musím vymyslet-- a následně je připraven pro zpracování 2. modulem (Log parser). 2. modul obsahuje BiLSTM-CRF - NER model, který je naučen na přístupných log filech a taguje části logu na příslušný a existující atribut. Výstupem 2. modulu je opět .json soubor, který se ve spojení s 1. modulem využívá ve finálním modulu a to Splunk Configuártoru 🤷‍♂️
-
-- Data
-    - created-logs (output file of giga_dataset_gen.py for SecBERT finetuning)
-    - raw-logs (raw form of logs from LogHub repository, features Linux, SSH logs)
-    - sample-logs (consists of 100 examples of login events (failed/success))
-    - train-logs (folder that was used during testing the past iteration of BERT models)
-    - log_preprocessing.ipynb (self explanatory)
-
-- Feedback
-    -
-    -
-
-- Model
-    - annotated_logs.txt
-    - BERT_clayrity.ipynb
-    - SecBERT_puvodni.ipynb
-    - SecBERT_test_lepsi.ipynb
-    - model_utils
-        - giga_dataset_gen.py
-        - model_utils.py
-        - secbert_model.py
-
-- enhanced_dataset_generator.py 
-- feature_bert - experiment.py
-- pokus_NER_LSTM_funny_mvp.py
-- README.md
-- requirements.txt (musel jsem addnout tf-keras protože teď updatnuli package a rozmrdalo se to)
-- streamlit_app.py
 
 
 
