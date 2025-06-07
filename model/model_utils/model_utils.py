@@ -7,7 +7,7 @@ import streamlit as st
 from sentence_transformers import util
 from sklearn.feature_extraction.text import TfidfVectorizer
 from Levenshtein import ratio as levenshtein_ratio
-from model.bert_model import get_secbert_analyzer  # Import the new SecBERT analyzer
+from model.bert_model import get_secbert_analyzer
 
 @st.cache_resource
 def load_model(model_name: str = 'bert-base-uncased') -> SentenceTransformer:
@@ -24,14 +24,11 @@ def normalize_text(text: str) -> str:
     text = re.sub(r'\d{2}/\d{2}/\d{4}\s\d{2}:\d{2}:\d{2}', '', text)
     text = re.sub(r'\d{1,2}/\d{1,2}/\d{2,4}', '', text)
     text = re.sub(r'\d{2}:\d{2}:\d{2}', '', text)
-
     # Remove IP addresses and ports
     text = re.sub(r'\b\d{1,3}(?:\.\d{1,3}){3}\b', '', text)
     text = re.sub(r':\d{1,5}\b', '', text)
-
     # Remove standalone numbers
     text = re.sub(r'\b\d+\b', '', text)
-
     # Remove braces, brackets, quotes, colons, commas
     text = re.sub(r'[{}[\]":,]', ' ', text)
     text = re.sub(r'(?<=[a-zA-Z])(?=[A-Z])', ' ', text)

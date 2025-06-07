@@ -32,10 +32,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 page = st.sidebar.selectbox("Choose a page", ["Log Analysis", "Corrections Management", "Named Entity Recognition"])
-MODEL_OPTIONS = ["BERT"] #, "LLM model (X)"
+MODEL_OPTIONS = ["bert-base-uncased", "all-MiniLM-L6-v2 (Fast)", "all-mpnet-base-v2 (Balanced)", "all-MiniLM-L12-v2 (Quality)"] #, "LLM model (X)"
 
-def get_similarity_model():
-    return load_model()
+def get_similarity_model(model_name=None):
+    return load_model(model_name)
 
 def main():
     if page == "Corrections Management":
@@ -107,7 +107,8 @@ def main():
             else:
                 # Similarity processing
                 progress.progress(10)
-                sim_model = get_similarity_model()
+                model_name = model_selection.split(" (")[0]
+                sim_model = get_similarity_model(model_name)
                 normalized = [normalize_text(l) for l in log_lines]
                 pos_texts = positive_examples_df['normalized_log'].tolist()
                 progress.progress(45)
