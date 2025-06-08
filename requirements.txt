@@ -3,11 +3,10 @@ pandas
 numpy
 sentence-transformers
 transformers
-torch --index-url https://download.pytorch.org/whl/cpu
+torch
 scikit-learn
 matplotlib
-Levenshtein
-spacy==3.4.4
+python-Levenshtein
 python-dateutil==2.9.0
 tqdm
 IPython
