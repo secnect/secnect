@@ -1,20 +1,13 @@
-# Core Streamlit and Data Processing
-streamlit>=1.28.0
-pandas>=1.5.0
-numpy>=1.21.0
-
-# Machine Learning and NLP
-sentence-transformers>=2.2.0
-transformers>=4.21.0
-torch>=2.0.0
-scikit-learn>=1.1.0
-
-# Visualization
-matplotlib>=3.5.0
-
-# Text Processing and NLP
-spacy==3.4.4
-python-Levenshtein>=0.20.0
+streamlit
+pandas
+numpy
+sentence-transformers
+transformers
+torch --index-url https://download.pytorch.org/whl/cpu
+scikit-learn
+matplotlib
+Levenshtein
+spacy==3.5.0
 python-dateutil==2.9.0
 tqdm>=4.64.0
 
