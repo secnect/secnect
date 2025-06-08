@@ -10,64 +10,10 @@ from Levenshtein import ratio as levenshtein_ratio
 from model.bert_model import get_secbert_analyzer
 
 @st.cache_resource
-def load_model(model_name: str = 'all-MiniLM-L6-v2') -> SentenceTransformer:
-    """
-    Load the specified model with proper error handling.
-    
-    Args:
-        model_name (str): Name of the model to load
-            Supported models:
-            - all-MiniLM-L6-v2 (Fast)
-            - all-mpnet-base-v2 (Balanced)
-            - all-MiniLM-L12-v2 (High Quality)
-    
-    Returns:
-        SentenceTransformer: Loaded model instance
-    
-    Raises:
-        ValueError: If unsupported model name is provided
-        Exception: If model loading fails
-    """
-    try:
-        # Extract base model name from the display name
-        base_model_name = model_name.split(" (")[0]
-        
-        # Validate model name
-        supported_models = {
-            "all-MiniLM-L6-v2": "Fast",
-            "all-mpnet-base-v2": "Balanced",
-            "all-MiniLM-L12-v2": "High Quality"
-        }
-        
-        if base_model_name not in supported_models:
-            raise ValueError(f"Unsupported model: {model_name}. "
-                           f"Supported models: {', '.join(supported_models.keys())}")
-        
-        # Load the model
-        try:
-            model = SentenceTransformer(base_model_name)
-            st.write(f"Successfully loaded model: {base_model_name} ({supported_models[base_model_name]})")
-            return model
-        except Exception as e:
-            st.error(f"Failed to load model {base_model_name}: {str(e)}")
-            raise
-        
-    except ValueError as ve:
-        st.error(str(ve))
-        raise
-    except Exception as e:
-        st.error(f"Unexpected error: {str(e)}")
-        raise
-
-@st.cache_data
-def load_positive_examples(csv_path: str = 'data/sample-logs/log_samples.csv') -> pd.DataFrame:
-    try:
-        df = pd.read_csv(csv_path)
-    except FileNotFoundError:
-        st.error(f"{csv_path} not found.")
-        return pd.DataFrame(columns=['Log', 'normalized_log'])
-    df['normalized_log'] = df['Log'].apply(normalize_text)
-    return df
+def load_model(model_name: str = 'bert-base-uncased') -> SentenceTransformer:
+    if model_name.lower() == 'secbert':
+        return get_secbert_analyzer()
+    return SentenceTransformer(model_name)
 
 def normalize_text(text: str) -> str:
     if pd.isna(text):
@@ -89,6 +35,16 @@ def normalize_text(text: str) -> str:
     text = text.lower()
     # Collapse multiple spaces and strip
     return ' '.join(text.split())
+
+@st.cache_data
+def load_positive_examples(csv_path: str = 'data/sample-logs/log_samples.csv') -> pd.DataFrame:
+    try:
+        df = pd.read_csv(csv_path)
+    except FileNotFoundError:
+        st.error(f"{csv_path} not found.")
+        return pd.DataFrame(columns=['Log', 'normalized_log'])
+    df['normalized_log'] = df['Log'].apply(normalize_text)
+    return df
 
 def compute_similarities(model: SentenceTransformer, positive_texts: list[str], target_texts: list[str]) -> tuple[np.ndarray, np.ndarray]:
     """Return (max_similarities, argmax_indices)."""
