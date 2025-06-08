@@ -44,12 +44,19 @@ def load_model(model_name: str = 'all-MiniLM-L6-v2') -> SentenceTransformer:
                            f"Supported models: {', '.join(supported_models.keys())}")
         
         # Load the model
-        model = SentenceTransformer(base_model_name)
-        st.write(f"Successfully loaded model: {base_model_name} ({supported_models[base_model_name]})")
-        return model
+        try:
+            model = SentenceTransformer(base_model_name)
+            st.write(f"Successfully loaded model: {base_model_name} ({supported_models[base_model_name]})")
+            return model
+        except Exception as e:
+            st.error(f"Failed to load model {base_model_name}: {str(e)}")
+            raise
         
+    except ValueError as ve:
+        st.error(str(ve))
+        raise
     except Exception as e:
-        st.error(f"Failed to load model {model_name}: {str(e)}")
+        st.error(f"Unexpected error: {str(e)}")
         raise
 
 @st.cache_data
