@@ -31,7 +31,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 page = st.sidebar.selectbox("Choose a page", ["Log Analysis", "Corrections Management", "Named Entity Recognition"])
-MODEL_OPTIONS = ["bert-base-uncased", "all-MiniLM-L6-v2 (Fast)", "all-mpnet-base-v2 (Balanced)", "all-MiniLM-L12-v2 (Quality)"] #, "LLM model (X)"
+# Model options with descriptions
+MODEL_OPTIONS = [
+    "all-MiniLM-L6-v2 (Fast)",
+    "all-mpnet-base-v2 (Balanced)",
+    "all-MiniLM-L12-v2 (High Quality)"
+]
 
 def get_similarity_model(model_name=None):
     return load_model(model_name)
