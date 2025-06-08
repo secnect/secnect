@@ -1,14 +1,40 @@
-streamlit
-pandas
-numpy
-sentence-transformers
-transformers
-torch --index-url https://download.pytorch.org/whl/cpu
-scikit-learn
-matplotlib
-Levenshtein
+# Core Streamlit and Data Processing
+streamlit>=1.28.0
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Machine Learning and NLP
+sentence-transformers>=2.2.0
+transformers>=4.21.0
+torch>=2.0.0
+scikit-learn>=1.1.0
+
+# Visualization
+matplotlib>=3.5.0
+
+# Text Processing and NLP
 spacy==3.4.4
+python-Levenshtein>=0.20.0
 python-dateutil==2.9.0
-tqdm
-IPython
-lime
+tqdm>=4.64.0
+
+# Development and Analysis
+IPython>=8.0.0
+lime>=0.2.0
+
+# Additional dependencies your app might need
+requests>=2.28.0
+Pillow>=9.0.0
+click>=8.0.0
+jinja2>=3.0.0
+networkx>=2.8.0
+protobuf>=3.20.0
+pyparsing>=3.0.0
+pytz>=2022.1
+pyyaml>=6.0
+scipy>=1.9.0
+six>=1.16.0
+smmap>=5.0.0
+sympy>=1.11.0
+tornado>=6.2.0
+wheel>=0.37.0
