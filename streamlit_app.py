@@ -3,6 +3,15 @@ import streamlit as st
 import pandas as pd
 import sys
 import os
+import warnings
+import logging
+
+# Suppress PyTorch warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="torch")
+warnings.filterwarnings("ignore", message=".*torch.classes.*")
+
+# Optionally suppress Streamlit file watcher warnings
+logging.getLogger("streamlit.watcher.local_sources_watcher").setLevel(logging.ERROR)
 
 # Add backend to path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
