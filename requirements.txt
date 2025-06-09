@@ -7,12 +7,9 @@ torch
 scikit-learn
 matplotlib
 Levenshtein
-spacy==3.4.4
 python-dateutil==2.9.0
 tqdm
 IPython
 lime
-plotly>=5.0.0
 networkx>=3.0
-numpy>=1.21.0
 pandas>=1.5.0
