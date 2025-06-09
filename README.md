@@ -165,7 +165,7 @@ Real-time inference with JSON-formatted output
 ├── runtime.txt
 ├── requirements.txt                 # Comprehensive dependencies
 ├── shared_setup.py                  # Shared setup/initialization
-└── streamlit_app.py                 # Main Streamlit application
+└── streamlit_app.py                 # Main Streamlit application</pre>
 --- 
 
 ## 🧠 Our Thoughts and Conclusions
