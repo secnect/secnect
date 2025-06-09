@@ -268,6 +268,7 @@ class NamedEntityRecognitionPage(BasePage):
 
         return entities
 
+
     def _display_entity_results(self, entities: Dict[str, List[Dict]]) -> None:
         """Display entity extraction results."""
         st.subheader("Extracted Entities")
@@ -277,14 +278,25 @@ class NamedEntityRecognitionPage(BasePage):
         for entity_type, entity_list in entities.items():
             unique_entities[entity_type] = len(set(item['entity'] for item in entity_list))
 
-        # Display metrics
-        cols = st.columns(len([k for k, v in unique_entities.items() if v > 0]))
-        col_idx = 0
+        # Filter out entity types with zero counts
+        non_zero_entities = {k: v for k, v in unique_entities.items() if v > 0}
 
-        for entity_type, count in unique_entities.items():
-            if count > 0:
-                cols[col_idx].metric(f"Unique {entity_type.title()}", count)
-                col_idx += 1
+        # Check if we have any entities to display
+        if not non_zero_entities:
+            st.info("No entities were extracted from the log data.")
+            return
+
+        # Display metrics columns
+        # Ensure we don't exceed reasonable column limits (max 6 columns for readability)
+        num_cols = min(len(non_zero_entities), 6)
+        if num_cols > 0:  # Safety check to ensure we have at least 1 column
+            cols = st.columns(num_cols)
+            col_idx = 0
+
+            for entity_type, count in non_zero_entities.items():
+                if col_idx < num_cols:  # Safety check
+                    cols[col_idx].metric(f"Unique {entity_type.title()}", count)
+                    col_idx += 1
 
         # Entity details
         for entity_type, entity_list in entities.items():
