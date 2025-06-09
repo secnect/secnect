@@ -1,3 +1,4 @@
+# backend/splunk_config_generator.py
 
 """
 Splunk Configuration Generator
