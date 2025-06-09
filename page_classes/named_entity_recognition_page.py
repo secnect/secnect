@@ -344,7 +344,7 @@ class NamedEntityRecognitionPage(BasePage):
         df = pd.DataFrame(patterns)
         category_counts = df['category'].value_counts()
 
-        col1, col2 = self.create_columns([1, 1])
+        col1, col2 = st.columns(2)
 
         with col1:
             st.metric("Total Patterns Detected", len(patterns))
