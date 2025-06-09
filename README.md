@@ -94,35 +94,78 @@ Real-time inference with JSON-formatted output
 │   ├── raw-logs/                    # Raw logs from LogHub (Linux, SSH)
 │   ├── sample-logs/                 # 100 examples of login events (failed/success)
 │   ├── train-logs/                  # Used during testing of previous BERT model iterations
+│   ├── df_400logs.csv               # CSV dataset with 400 logs
 │   └── log_preprocessing.ipynb
 │
 ├── feedback/          
 │   └── corrections.json             # Used for evaluation and tracking training usage
 │
 ├── model/
+│   ├── __pycache__/
 │   ├── annotated_logs.txt
+│   ├── config.json
+│   ├── bert_model.py                # BERT model implementation
+│   ├── event_patterns.json          # Event pattern definitions
 │   ├── NER/
 │   │    ├── best_ner_model.pth
-│   │    ├── vocabularies.pkl       # vocab generated during training phase
-│   │    └── test_tokenizer.ipynb   # 
+│   │    ├── vocabularies.pkl        # vocab generated during training phase
+│   │    └── test_tokenizer.ipynb    
 │   │
 │   └── model_utils/
 │       ├── giga_dataset_gen.py
-│       ├── model_utils.py
-│       ├── config.json
-│       └── bert_model.py
+│       └── model_utils.py
 │
-├── Streamlit_custom_utils/
-│   ├── corrections_manager.py
-│   ├── log_feedback.py
-│   ├── ner_model.py                # To be added if I remember
-│   └── splunk_configurator.py      # To be added if I remember
+├── pages/                           # Streamlit multi-page structure
+│   ├── __init__.py
+│   ├── __pycache__/
+│   ├── 01_Log_Analysis.py           # Log analysis page
+│   ├── 02_Corrections_Management.py # Corrections management page
+│   ├── 03_Named_Entity_Recognition.py # NER page
+│   └── 04_Splunk_Configuration.py   # Splunk configuration page
 │
+├── utils/                           # General utility functions
+│   ├── __init__.py
+│   ├── __pycache__/
+│   └── state_manager.py             # State management utilities
+│
+├── components/                      # Reusable UI components
+│   ├── __init__.py
+│   ├── __pycache__/
+│   ├── header.py                    # Header component
+│   └── sidebar.py                   # Sidebar component
+│
+├── services/                        # Service layer components
+│   ├── __init__.py
+│   ├── __pycache__/
+│   └── file_service.py              # File handling services
+│
+├── backend/                         # Backend services/API
+│   ├── init.py
+│   ├── __pycache__/
+│   └── splunk_config_generator.py   # Splunk configuration generator
+│
+├── page_classes/                    # Page class definitions
+│   └── [Python files - structure not fully explored]
+│
+├── assets/                          # Static assets (images, etc.)
+│   └── [Asset files - structure not fully explored]
+│
+├── config/                          # Configuration files
+│   └── [Config files - structure not fully explored]
+│
+├── streamlit_custom_utils/          # Original custom utilities
+│   ├── corrections_manager.py       # Corrections management
+│   ├── log_feedback.py              # Feedback handling
+│   ├── ner_model.py                 # NER model utilities
+│   └── splunk_configurator.py       # Splunk configuration utilities
+│
+├── .gitignore                       # Git ignore rules
 ├── README.md
 ├── LICENSE
 ├── runtime.txt
-├── requirements.txt                # Added tf-keras due to recent package update
-└── streamlit_app.py</pre>
+├── requirements.txt                 # Comprehensive dependencies
+├── shared_setup.py                  # Shared setup/initialization
+└── streamlit_app.py                 # Main Streamlit application
 --- 
 
 ## 🧠 Our Thoughts and Conclusions
