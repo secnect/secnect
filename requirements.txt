@@ -6,8 +6,10 @@ transformers
 torch
 scikit-learn
 matplotlib
-python-Levenshtein
+Levenshtein
 python-dateutil==2.9.0
 tqdm
 IPython
 lime
+networkx>=3.0
+pandas>=1.5.0

@@ -1,3 +1,5 @@
+# backend/init.py
+
 """
 Backend modules for Splunk configuration generation.
 """
