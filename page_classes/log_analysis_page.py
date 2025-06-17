@@ -66,7 +66,7 @@ class LogAnalysisPage(BasePage):
 
     def _render_introduction(self) -> None:
         """Render the page introduction."""
-        self.render_section_header("Security Log Analysis", ui_config.ANALYSIS_ICON)
+        self.render_section_header("Security Log Analysis")
         st.markdown(app_config.INTRODUCTION_TEXT)
 
     def _get_analysis_config(self) -> Dict[str, Any]:
