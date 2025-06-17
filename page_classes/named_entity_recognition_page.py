@@ -34,7 +34,7 @@ class NamedEntityRecognitionPage(BasePage):
 
     def render(self) -> None:
         """Render the NER page focused on entity extraction."""
-        self.render_section_header("Named Entity Recognition")
+        self.render_section_header("Named Entity Recognition - If you don't see the Demo Button, refresh the site")
 
         st.markdown("""
         Automatically extract and identify entities from your security logs including IP addresses, 
@@ -92,7 +92,29 @@ class NamedEntityRecognitionPage(BasePage):
             "Jun 30 20:16:30 combo sshd(pam_unix)[19222]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root", 
             "Jun 30 20:53:04 combo klogind[19272]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code",
             "Jun 30 20:53:04 combo klogind[19272]: Kerberos authentication failed",
-            "Jun 30 20:53:04 combo klogind[19287]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code"
+            "Jun 30 20:53:04 combo klogind[19287]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code",
+            "Jun 30 20:17:45 gateway sshd(pam_unix)[19234]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=192.168.1.150  user=admin",
+            "Jun 30 20:18:12 webserver httpd[8912]: authentication failed for user 'dbuser' from 172.16.0.42",
+            "Jun 30 20:19:33 mailserver postfix/smtpd[5678]: authentication failed: user=mail@company.com, method=PLAIN, rip=203.45.67.89",
+            "Jun 30 20:20:15 firewall kernel[0]: TCP connection denied from 10.0.0.45:3389 to 192.168.1.100:22",
+            "Jun 30 20:21:08 database mysqld[7412]: Access denied for user 'backup'@'10.1.1.25' (using password: YES)",
+            "Jun 30 20:22:41 proxy squid[9876]: authentication failed for user 'guest' from 172.20.1.33",
+            "Jun 30 20:23:19 ldapserver slapd[4567]: authentication failure; logname= uid=1001 euid=1001 user=testuser rhost=10.10.10.50",
+            "Jun 30 20:24:52 vpnserver openvpn[3344]: authentication failed for user 'contractor' from 88.99.77.66",
+            "Jun 30 20:25:37 ftpserver vsftpd[2211]: authentication failed for user 'anonymous' from 45.123.89.12",
+            "Jun 30 20:26:14 appserver tomcat[8888]: authentication failure; user=developer rhost=192.168.10.75 method=form",
+            "Jun 30 20:27:03 dns bind[1123]: authentication failed from 208.67.222.222 for zone transfer request",
+            "Jun 30 20:27:48 radius radiusd[5599]: authentication failed for user 'wifiuser' from nas 172.30.1.1 port 0",
+            "Jun 30 20:28:25 jenkins java[7799]: authentication failed for user 'build' from 10.5.5.100",
+            "Jun 30 20:29:11 backup bacula[4433]: authentication failed for client 'workstation-01' from 192.168.2.150",
+            "Jun 30 20:30:07 monitoring nagios[6677]: authentication failed for user 'monitor' from 172.25.1.200",
+            "Jun 30 20:31:15 gateway sshd(pam_unix)[19456]: session opened for user 'sysadmin' by (uid=0) from 192.168.1.25",
+            "Jun 30 20:32:22 webserver httpd[9134]: authentication successful for user 'webadmin' from 172.16.0.50",
+            "Jun 30 20:33:08 mailserver postfix/smtpd[5890]: authentication successful: user=support@company.com, method=LOGIN, rip=203.45.67.100",
+            "Jun 30 20:34:44 database mysqld[7633]: User 'analytics'@'10.1.1.30' authenticated successfully",
+            "Jun 30 20:35:19 vpnserver openvpn[3567]: user 'manager' authenticated successfully from 88.99.77.80",
+            "Jun 30 20:36:33 ldapserver slapd[4890]: bind successful for user 'jdoe' from 10.10.10.60",
+            "Jun 30 20:37:12 appserver tomcat[9012]: login successful; user=qa_engineer rhost=192.168.10.80 method=form"
         ]
         
         # Store the example logs
