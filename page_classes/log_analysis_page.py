@@ -78,21 +78,16 @@ class LogAnalysisPage(BasePage):
         """Handle the file upload section."""
         self.render_section_header("Upload Log File", ui_config.UPLOAD_ICON, divider=False)
 
-        # First file uploader (e.g., main upload)
+        # File uploader
         uploaded_file = self.handle_file_upload("Choose a log file", key="log_upload_1")
-
-        if uploaded_file:
-            st.write(f"You selected: **{config['model_selection']}**")
-            self._process_uploaded_file(uploaded_file, config, positive_examples_df)
-        else:
-            AppState.set('show_results', False)
 
         # Add example data button
         st.markdown("**Or try with example data:**")
-        if st.button("🚀 Load Example Security Logs", help="Load 5 example security log entries for demonstration"):
+        if st.button("🚀 Load Example Security Logs", help="Load 27 example security log entries for demonstration", key="load_examples"):
             self._load_example_logs(config, positive_examples_df)
             return  # Exit early since we've processed example data
 
+        # Process uploaded file if one was selected
         if uploaded_file:
             st.write(f"You selected: **{config['model_selection']}**")
             self._process_uploaded_file(uploaded_file, config, positive_examples_df)
@@ -120,7 +115,7 @@ class LogAnalysisPage(BasePage):
         self._display_log_preview(log_lines)
 
         # Analysis button
-        if st.button(f"{ui_config.SEARCH_ICON} Analyze Log File", type="primary"):
+        if st.button(f"{ui_config.SEARCH_ICON} Analyze Log File", type="primary", key=f"log_upload_{uploaded_file.name}"):
             self._perform_analysis(log_lines, config, positive_examples_df)
             
     def _load_example_logs(self, config: Dict[str, Any], positive_examples_df: pd.DataFrame) -> None:

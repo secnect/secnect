@@ -34,6 +34,8 @@ class NamedEntityRecognitionPage(BasePage):
 
     def render(self) -> None:
         """Render the NER page focused on entity extraction."""
+        # Add refresh button at the top
+        
         self.render_section_header("Named Entity Recognition - If you don't see the Demo Button, refresh the site")
 
         st.markdown("""
@@ -51,20 +53,15 @@ class NamedEntityRecognitionPage(BasePage):
 
     def _check_data_availability(self) -> bool:
         """Check if log data is available for analysis."""
-        return AppState.has_log_lines() or AppState.get('ner_log_lines') is not None
+        # More comprehensive check
+        log_lines = AppState.get('ner_log_lines')
+        return log_lines is not None and len(log_lines) > 0
 
     def _render_upload_section(self) -> None:
         """Render file upload section for NER analysis."""
         self.display_info("Upload log files to begin Named Entity Recognition analysis.")
 
-        # Check if we can use existing analysis data
-        if AppState.has_log_lines():
-            if st.button("Use Existing Log Data", type="primary"):
-                log_lines = AppState.get('log_lines')
-                AppState.set('ner_log_lines', log_lines)
-                st.rerun()
-                return
-
+    
         # Upload new file
         st.subheader("Upload Log File for NER Analysis")
         uploaded_file = self.handle_file_upload("Choose a log file for entity recognition")
