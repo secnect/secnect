@@ -68,6 +68,12 @@ class NamedEntityRecognitionPage(BasePage):
         # Upload new file
         st.subheader("Upload Log File for NER Analysis")
         uploaded_file = self.handle_file_upload("Choose a log file for entity recognition")
+        
+        # Add example data button
+        st.markdown("**Or try with example data:**")
+        if st.button("🚀 Load Example Security Logs for NER", help="Load 5 example security log entries for entity recognition"):
+            self._load_example_logs_for_ner()
+            return  # Exit early since we've processed example data
 
         if uploaded_file:
             result = self.file_service.process_uploaded_file(uploaded_file)
@@ -77,6 +83,35 @@ class NamedEntityRecognitionPage(BasePage):
                 st.rerun()
             else:
                 self.display_error(result["error"])
+                
+    def _load_example_logs_for_ner(self) -> None:
+        """Load example security logs for NER analysis."""
+        # Example security log entries with rich entity content
+        example_logs = [
+            "Jun 30 20:16:26 combo sshd(pam_unix)[19208]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root",
+            "Jun 30 20:16:30 combo sshd(pam_unix)[19222]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root", 
+            "Jun 30 20:53:04 combo klogind[19272]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code",
+            "Jun 30 20:53:04 combo klogind[19272]: Kerberos authentication failed",
+            "Jun 30 20:53:04 combo klogind[19287]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code"
+        ]
+        
+        # Store the example logs
+        AppState.set('ner_log_lines', example_logs)
+        
+        # Display success message
+        self.display_success(f"Loaded {len(example_logs)} example security log lines for entity recognition")
+        
+        # Display basic info about loaded data
+        st.write("**Example data loaded successfully!**")
+        st.write("The logs contain various entities like IP addresses, usernames, hostnames, and timestamps.")
+        
+        # Show preview of the loaded data
+        with st.expander("👀 View Example Log Lines"):
+            for i, line in enumerate(example_logs, 1):
+                st.text(f"{i}. {line}")
+        
+        # Automatically rerun to show the entity extraction interface
+        st.rerun()
 
     def _render_entity_extraction(self) -> None:
         """Render entity extraction functionality."""

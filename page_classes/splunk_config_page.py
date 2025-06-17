@@ -136,6 +136,17 @@ class SplunkConfigPage(BasePage):
         """Handle generation from manual file upload."""
         self.display_info("To generate configurations, please first analyze a log file in the 'Log Analysis' page.")
 
+        # Check if example logs are loaded and show generate button
+        if st.session_state.get('splunk_example_loaded', False):
+            example_logs = st.session_state.get('splunk_example_logs', [])
+            st.write("**Example data is loaded and ready for configuration generation.**")
+            st.write(f"You selected: **{config['sourcetype']}** sourcetype")
+            
+            if st.button(f"🔧 Generate Splunk Configurations from Examples", type="primary"):
+                self._generate_configurations_from_upload(example_logs, config)
+                st.session_state['splunk_example_loaded'] = False  # Reset after generation
+            return
+
         # Alternative: manual upload
         self.render_subheader("Or upload a log file for configuration generation")
 
@@ -143,9 +154,45 @@ class SplunkConfigPage(BasePage):
             "Choose a log file for configuration generation",
             key="splunk_upload"
         )
+        
+        # Add example data button
+        st.markdown("**Or try with example data:**")
+        if st.button("🚀 Load Example Security Logs for Splunk Config <-- Click 2x", help="Load 5 example security log entries for Splunk configuration generation"):
+            self._load_example_logs_for_splunk(config)
+            return  # Exit early since we've processed example data
 
         if uploaded_file:
             self._handle_manual_upload_generation(uploaded_file, config)
+            
+    def _load_example_logs_for_splunk(self, config: Dict[str, Any]) -> None:
+        """Load example security logs for Splunk configuration generation."""
+        # Example security log entries
+        example_logs = [
+            "Jun 30 20:16:26 combo sshd(pam_unix)[19208]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root",
+            "Jun 30 20:16:30 combo sshd(pam_unix)[19222]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root", 
+            "Jun 30 20:53:04 combo klogind[19272]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code",
+            "Jun 30 20:53:04 combo klogind[19272]: Kerberos authentication failed",
+            "Jun 30 20:53:04 combo klogind[19287]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code"
+        ]
+        
+        # Store example logs in session state for persistence
+        st.session_state['splunk_example_logs'] = example_logs
+        st.session_state['splunk_example_loaded'] = True
+        
+        # Display success message
+        self.display_success(f"Loaded {len(example_logs)} example security log lines for Splunk configuration generation")
+        
+        # Display basic info about loaded data
+        st.write("**Example data loaded successfully!**")
+        st.write("These logs contain authentication failures and security events perfect for Splunk configuration.")
+        
+        # Show preview of the loaded data
+        with st.expander("👀 View Example Log Lines"):
+            for i, line in enumerate(example_logs, 1):
+                st.text(f"{i}. {line}")
+        
+        # Show generate button immediately
+        st.write(f"You selected: **{config['sourcetype']}** sourcetype")
 
     def _display_analysis_summary(self) -> None:
         """Display summary of existing analysis results."""
@@ -352,8 +399,7 @@ class SplunkConfigPage(BasePage):
                     data=content,
                     filename=filename,
                     label=f"📄 {filename}",
-                    mime="text/plain",
-                    key=f"download_{filename.replace('.', '_')}"
+                    mime="text/plain"
                 )
 
         # Installation instructions

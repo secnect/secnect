@@ -72,14 +72,26 @@ class LogAnalysisPage(BasePage):
     def _get_analysis_config(self) -> Dict[str, Any]:
         """Get analysis configuration from sidebar."""
         config = self.sidebar.render_analysis_config()
-        self.sidebar.render_changelog()
         return config
 
     def _handle_file_upload_section(self, config: Dict[str, Any], positive_examples_df: pd.DataFrame) -> None:
         """Handle the file upload section."""
         self.render_section_header("Upload Log File", ui_config.UPLOAD_ICON, divider=False)
 
-        uploaded_file = self.handle_file_upload("Choose a log file")
+        # First file uploader (e.g., main upload)
+        uploaded_file = self.handle_file_upload("Choose a log file", key="log_upload_1")
+
+        if uploaded_file:
+            st.write(f"You selected: **{config['model_selection']}**")
+            self._process_uploaded_file(uploaded_file, config, positive_examples_df)
+        else:
+            AppState.set('show_results', False)
+
+        # Add example data button
+        st.markdown("**Or try with example data:**")
+        if st.button("🚀 Load Example Security Logs", help="Load 5 example security log entries for demonstration"):
+            self._load_example_logs(config, positive_examples_df)
+            return  # Exit early since we've processed example data
 
         if uploaded_file:
             st.write(f"You selected: **{config['model_selection']}**")
@@ -110,7 +122,45 @@ class LogAnalysisPage(BasePage):
         # Analysis button
         if st.button(f"{ui_config.SEARCH_ICON} Analyze Log File", type="primary"):
             self._perform_analysis(log_lines, config, positive_examples_df)
-
+            
+    def _load_example_logs(self, config: Dict[str, Any], positive_examples_df: pd.DataFrame) -> None:
+        """Load and analyze example security logs."""
+        # Example security log entries
+        example_logs = [
+            "Jun 30 20:16:26 combo sshd(pam_unix)[19208]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root",
+            "Jun 30 20:16:30 combo sshd(pam_unix)[19222]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=195.129.24.210  user=root", 
+            "Jun 30 20:53:04 combo klogind[19272]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code",
+            "Jun 30 20:53:04 combo klogind[19272]: Kerberos authentication failed",
+            "Jun 30 20:53:04 combo klogind[19287]: Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code"
+        ]
+        
+        # Store example file info
+        AppState.set('uploaded_file_name', 'example_security_logs.txt')
+        
+        # Display success message and file info
+        self.display_success(f"Loaded {len(example_logs)} example security log lines")
+        
+        # Display example file info
+        example_file_info = {
+            'name': 'example_security_logs.txt',
+            'size': sum(len(line.encode('utf-8')) for line in example_logs),
+            'type': 'text/plain'
+        }
+        
+        example_result = {
+            'log_lines': example_logs,
+            'line_count': len(example_logs)
+        }
+        
+        self._display_file_info(example_file_info, example_result)
+        self._display_log_preview(example_logs)
+        
+        st.write(f"You selected: **{config['model_selection']}**")
+        
+        # Automatically perform analysis instead of showing another button
+        st.info("Automatically analyzing example logs...")
+        self._perform_analysis(example_logs, config, positive_examples_df)
+        
     def _display_file_info(self, file_info: Dict[str, Any], result: Dict[str, Any]) -> None:
         """Display information about the uploaded file."""
         with st.expander("📊 File Information"):
