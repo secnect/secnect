@@ -117,7 +117,7 @@ class CorrectionsManager:
 
 def show_corrections_management():
     """Display corrections management interface"""
-    st.header("🔧 Corrections Management")
+    st.header("Corrections Management")
     st.markdown("Manage user corrections and track their usage in training datasets.")
     
     # Initialize corrections manager
